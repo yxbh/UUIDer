@@ -151,7 +151,6 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/resolve_config.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/exclusive_builds_post.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/default_post.prf \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/c++11.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/qml_debug.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/declarative_debug.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/win32/rtti.prf \
@@ -263,7 +262,6 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\resolve_config.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\exclusive_builds_post.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\default_post.prf:
-..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\c++11.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\qml_debug.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\declarative_debug.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\win32\rtti.prf:

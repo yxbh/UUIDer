@@ -3,15 +3,6 @@
 	[
 		{
 			"path": "UUIDer"
-		},
-		{
-			"path": "build-UUIDer-Desktop_Qt_5_1_1_clang_64bit-Debug"
-		},
-		{
-			"path": "build-UUIDer-Desktop_Qt_5_2_0_MinGW_32bit-Debug"
-		},
-		{
-			"path": "build-UUIDer-Desktop_Qt_5_2_0_MinGW_32bit-Release"
 		}
 	]
 }

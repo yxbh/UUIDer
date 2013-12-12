@@ -1,21 +1,22 @@
-#pragma once
+#ifndef UUIDERMAINWINDOW_HPP
+#define UUIDERMAINWINDOW_HPP
+
 #include <QMainWindow>
 
-namespace Ui
-{
+namespace Ui {
 class UUIDerMainWindow;
 }
 
-class UUIDerMainWindow
-	: public QMainWindow
+class UUIDerMainWindow : public QMainWindow
 {
-private:
-	Q_OBJECT
-
-    Ui::UUIDerMainWindow *ui;
+    Q_OBJECT
 
 public:
-    ~UUIDerMainWindow(void);
-    explicit UUIDerMainWindow(QWidget * const p_pParent = nullptr);
+    explicit UUIDerMainWindow(QWidget *parent = 0);
+    ~UUIDerMainWindow();
 
-}; // MainWindow class
+private:
+    Ui::UUIDerMainWindow *ui;
+};
+
+#endif // UUIDERMAINWINDOW_HPP

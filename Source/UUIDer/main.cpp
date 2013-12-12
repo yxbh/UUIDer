@@ -1,11 +1,11 @@
 #include "UUIDerMainWindow.hpp"
 #include <QApplication>
 
-int main(int p_Argc, char * p_Argv[])
+int main(int argc, char *argv[])
 {
-    QApplication app(p_Argc, p_Argv);
-    UUIDerMainWindow main_window(nullptr);
-    main_window.show();
+    QApplication a(argc, argv);
+    UUIDerMainWindow w;
+    w.show();
 
-    return app.exec();
+    return a.exec();
 }
