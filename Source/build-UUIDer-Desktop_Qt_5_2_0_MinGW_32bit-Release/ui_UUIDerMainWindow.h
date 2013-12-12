@@ -34,9 +34,15 @@ class Ui_UUIDerMainWindow
 public:
     QAction *action;
     QAction *actionAbout;
+    QAction *actionOpen_DB;
+    QAction *actionNew;
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *Label_CurDBHeader;
+    QLabel *Label_CurDB;
+    QSpacerItem *horizontalSpacer_2;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout;
     QPushButton *Button_GenNewUUID;
@@ -66,15 +72,39 @@ public:
         action->setObjectName(QStringLiteral("action"));
         actionAbout = new QAction(UUIDerMainWindow);
         actionAbout->setObjectName(QStringLiteral("actionAbout"));
+        actionOpen_DB = new QAction(UUIDerMainWindow);
+        actionOpen_DB->setObjectName(QStringLiteral("actionOpen_DB"));
+        actionNew = new QAction(UUIDerMainWindow);
+        actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(UUIDerMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_4 = new QVBoxLayout(centralWidget);
-        verticalLayout_4->setSpacing(6);
-        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3 = new QVBoxLayout(centralWidget);
         verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        Label_CurDBHeader = new QLabel(centralWidget);
+        Label_CurDBHeader->setObjectName(QStringLiteral("Label_CurDBHeader"));
+
+        horizontalLayout_4->addWidget(Label_CurDBHeader);
+
+        Label_CurDB = new QLabel(centralWidget);
+        Label_CurDB->setObjectName(QStringLiteral("Label_CurDB"));
+
+        horizontalLayout_4->addWidget(Label_CurDB);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
@@ -121,7 +151,7 @@ public:
         verticalLayout_2->addLayout(horizontalLayout);
 
 
-        verticalLayout_3->addLayout(verticalLayout_2);
+        verticalLayout->addLayout(verticalLayout_2);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
@@ -154,7 +184,7 @@ public:
         horizontalLayout_2->addWidget(label_2);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_2);
+        verticalLayout->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
@@ -174,14 +204,14 @@ public:
         horizontalLayout_3->addItem(horizontalSpacer);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_3);
+        verticalLayout->addLayout(horizontalLayout_3);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_3->addItem(verticalSpacer);
+        verticalLayout->addItem(verticalSpacer);
 
 
-        verticalLayout_4->addLayout(verticalLayout_3);
+        verticalLayout_3->addLayout(verticalLayout);
 
         UUIDerMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UUIDerMainWindow);
@@ -201,6 +231,8 @@ public:
 
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuHelp->menuAction());
+        menuFile->addAction(actionOpen_DB);
+        menuFile->addAction(actionNew);
         menuHelp->addAction(action);
         menuHelp->addSeparator();
         menuHelp->addAction(actionAbout);
@@ -215,6 +247,10 @@ public:
         UUIDerMainWindow->setWindowTitle(QApplication::translate("UUIDerMainWindow", "UUIDer", 0));
         action->setText(QApplication::translate("UUIDerMainWindow", "???", 0));
         actionAbout->setText(QApplication::translate("UUIDerMainWindow", "About", 0));
+        actionOpen_DB->setText(QApplication::translate("UUIDerMainWindow", "Open DB", 0));
+        actionNew->setText(QApplication::translate("UUIDerMainWindow", "New", 0));
+        Label_CurDBHeader->setText(QApplication::translate("UUIDerMainWindow", "Current DB: ", 0));
+        Label_CurDB->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
 #ifndef QT_NO_TOOLTIP
         Button_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
 #endif // QT_NO_TOOLTIP

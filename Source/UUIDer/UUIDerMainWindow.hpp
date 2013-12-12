@@ -15,6 +15,9 @@ public:
     explicit UUIDerMainWindow(QWidget *parent = 0);
     ~UUIDerMainWindow();
 
+private slots:
+    void on_actionNew_triggered();
+
 private:
     Ui::UUIDerMainWindow *ui;
 };

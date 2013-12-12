@@ -12,3 +12,8 @@ UUIDerMainWindow::~UUIDerMainWindow()
 {
     delete ui;
 }
+
+void UUIDerMainWindow::on_actionNew_triggered()
+{
+
+}
