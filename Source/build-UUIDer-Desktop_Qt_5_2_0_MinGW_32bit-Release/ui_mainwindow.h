@@ -16,6 +16,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
@@ -29,6 +30,8 @@ QT_BEGIN_NAMESPACE
 class Ui_UUIDerMainWindow
 {
 public:
+    QAction *action;
+    QAction *actionAbout;
     QWidget *centralWidget;
     QPushButton *button_Generate;
     QPushButton *button_GetUUID;
@@ -40,12 +43,18 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
+    QMenu *menuFile;
+    QMenu *menuHelp;
 
     void setupUi(QMainWindow *UUIDerMainWindow)
     {
         if (UUIDerMainWindow->objectName().isEmpty())
             UUIDerMainWindow->setObjectName(QStringLiteral("UUIDerMainWindow"));
         UUIDerMainWindow->resize(400, 402);
+        action = new QAction(UUIDerMainWindow);
+        action->setObjectName(QStringLiteral("action"));
+        actionAbout = new QAction(UUIDerMainWindow);
+        actionAbout->setObjectName(QStringLiteral("actionAbout"));
         centralWidget = new QWidget(UUIDerMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         button_Generate = new QPushButton(centralWidget);
@@ -84,7 +93,17 @@ public:
         menuBar = new QMenuBar(UUIDerMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 400, 21));
+        menuFile = new QMenu(menuBar);
+        menuFile->setObjectName(QStringLiteral("menuFile"));
+        menuHelp = new QMenu(menuBar);
+        menuHelp->setObjectName(QStringLiteral("menuHelp"));
         UUIDerMainWindow->setMenuBar(menuBar);
+
+        menuBar->addAction(menuFile->menuAction());
+        menuBar->addAction(menuHelp->menuAction());
+        menuHelp->addAction(action);
+        menuHelp->addSeparator();
+        menuHelp->addAction(actionAbout);
 
         retranslateUi(UUIDerMainWindow);
 
@@ -94,10 +113,14 @@ public:
     void retranslateUi(QMainWindow *UUIDerMainWindow)
     {
         UUIDerMainWindow->setWindowTitle(QApplication::translate("UUIDerMainWindow", "MainWindow", 0));
+        action->setText(QApplication::translate("UUIDerMainWindow", "???", 0));
+        actionAbout->setText(QApplication::translate("UUIDerMainWindow", "About", 0));
         button_Generate->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
         button_GetUUID->setText(QApplication::translate("UUIDerMainWindow", "Get", 0));
         label->setText(QApplication::translate("UUIDerMainWindow", "UUID's", 0));
         label_2->setText(QApplication::translate("UUIDerMainWindow", "UUID from DB.", 0));
+        menuFile->setTitle(QApplication::translate("UUIDerMainWindow", "File", 0));
+        menuHelp->setTitle(QApplication::translate("UUIDerMainWindow", "Help", 0));
     } // retranslateUi
 
 };
