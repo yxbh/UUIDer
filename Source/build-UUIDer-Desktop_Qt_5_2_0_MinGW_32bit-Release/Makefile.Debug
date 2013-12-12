@@ -503,9 +503,17 @@ debug/UUIDerMainWindow.o: ../UUIDer/UUIDerMainWindow.cpp ../UUIDer/UUIDerMainWin
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QLabel \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlabel.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QMenu \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qmenu.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QMenuBar \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qmenubar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qmenu.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QPushButton \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qpushbutton.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractbutton.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QSpinBox \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qspinbox.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QStatusBar \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstatusbar.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QToolBar \
