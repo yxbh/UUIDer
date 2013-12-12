@@ -28,6 +28,10 @@ FORMS    += UUIDerMainWindow.ui
 #
 
 # compile flags
-CONFIG += C++11
+win32{
+    greaterThan(QT_MAJOR_VERSION, 4): CONFIG += C++11
+} else {
+    QMAKE_CXXFLAGS += -std=c++11 # temp sln until Mac Qt version is updated to 5.2
+}
 QMAKE_CXXFLAGS_WARN_ON
 #
