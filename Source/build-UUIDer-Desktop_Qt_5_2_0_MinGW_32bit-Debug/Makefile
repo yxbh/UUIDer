@@ -151,6 +151,7 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/resolve_config.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/exclusive_builds_post.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/default_post.prf \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/c++11.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/qml_debug.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/declarative_debug.prf \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/win32/rtti.prf \
@@ -167,6 +168,7 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mkspecs/features/lex.prf \
 		../UUIDer/UUIDer.pro \
 		D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Widgets.prl \
+		D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Sql.prl \
 		D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Gui.prl \
 		D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile ..\UUIDer\UUIDer.pro
@@ -262,6 +264,7 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\resolve_config.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\exclusive_builds_post.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\default_post.prf:
+..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\c++11.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\qml_debug.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\declarative_debug.prf:
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\win32\rtti.prf:
@@ -278,6 +281,7 @@ Makefile: ../UUIDer/UUIDer.pro ../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/mks
 ..\..\..\..\Tools\Qt\Qt5.2.0\5.2.0\mingw48_32\mkspecs\features\lex.prf:
 ..\UUIDer\UUIDer.pro:
 D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Widgets.prl:
+D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Sql.prl:
 D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Gui.prl:
 D:/Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/lib/Qt5Core.prl:
 qmake: FORCE
