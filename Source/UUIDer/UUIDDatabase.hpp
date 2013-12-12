@@ -3,6 +3,7 @@
 #include <QSqlDatabase>
 #include <vector>
 #include <string>
+#include "UUID.hpp"
 
 namespace BH
 {

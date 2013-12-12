@@ -13,7 +13,8 @@ TEMPLATE 	= app
 
 # header files.
 HEADERS  += UUIDerMainWindow.hpp \
-    UUIDDatabase.hpp
+    UUIDDatabase.hpp \
+    UUIDTypes.hpp
 #
 
 # source files.
