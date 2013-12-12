@@ -39,12 +39,12 @@ public:
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton;
-    QSpinBox *spinBox;
+    QPushButton *Button_GenNewUUID;
+    QSpinBox *SpinBox_NumUUIDToGen;
     QLabel *label;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton_2;
-    QSpinBox *spinBox_2;
+    QPushButton *Button_GetUUIDs;
+    QSpinBox *SpinBox_NumUUIDToGet;
     QLabel *label_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_3;
@@ -82,27 +82,30 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        Button_GenNewUUID = new QPushButton(centralWidget);
+        Button_GenNewUUID->setObjectName(QStringLiteral("Button_GenNewUUID"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
+        sizePolicy.setHeightForWidth(Button_GenNewUUID->sizePolicy().hasHeightForWidth());
+        Button_GenNewUUID->setSizePolicy(sizePolicy);
+        Button_GenNewUUID->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(Button_GenNewUUID);
 
-        spinBox = new QSpinBox(centralWidget);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
+        SpinBox_NumUUIDToGen = new QSpinBox(centralWidget);
+        SpinBox_NumUUIDToGen->setObjectName(QStringLiteral("SpinBox_NumUUIDToGen"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(spinBox->sizePolicy().hasHeightForWidth());
-        spinBox->setSizePolicy(sizePolicy1);
-        spinBox->setMinimumSize(QSize(0, 0));
-        spinBox->setBaseSize(QSize(0, 0));
+        sizePolicy1.setHeightForWidth(SpinBox_NumUUIDToGen->sizePolicy().hasHeightForWidth());
+        SpinBox_NumUUIDToGen->setSizePolicy(sizePolicy1);
+        SpinBox_NumUUIDToGen->setMinimumSize(QSize(0, 0));
+        SpinBox_NumUUIDToGen->setBaseSize(QSize(0, 0));
+        SpinBox_NumUUIDToGen->setMinimum(1);
+        SpinBox_NumUUIDToGen->setMaximum(1000);
 
-        horizontalLayout->addWidget(spinBox);
+        horizontalLayout->addWidget(SpinBox_NumUUIDToGen);
 
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
@@ -123,19 +126,22 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy);
+        Button_GetUUIDs = new QPushButton(centralWidget);
+        Button_GetUUIDs->setObjectName(QStringLiteral("Button_GetUUIDs"));
+        sizePolicy.setHeightForWidth(Button_GetUUIDs->sizePolicy().hasHeightForWidth());
+        Button_GetUUIDs->setSizePolicy(sizePolicy);
+        Button_GetUUIDs->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(Button_GetUUIDs);
 
-        spinBox_2 = new QSpinBox(centralWidget);
-        spinBox_2->setObjectName(QStringLiteral("spinBox_2"));
-        sizePolicy1.setHeightForWidth(spinBox_2->sizePolicy().hasHeightForWidth());
-        spinBox_2->setSizePolicy(sizePolicy1);
+        SpinBox_NumUUIDToGet = new QSpinBox(centralWidget);
+        SpinBox_NumUUIDToGet->setObjectName(QStringLiteral("SpinBox_NumUUIDToGet"));
+        sizePolicy1.setHeightForWidth(SpinBox_NumUUIDToGet->sizePolicy().hasHeightForWidth());
+        SpinBox_NumUUIDToGet->setSizePolicy(sizePolicy1);
+        SpinBox_NumUUIDToGet->setMinimum(1);
+        SpinBox_NumUUIDToGet->setMaximum(50);
 
-        horizontalLayout_2->addWidget(spinBox_2);
+        horizontalLayout_2->addWidget(SpinBox_NumUUIDToGet);
 
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -209,9 +215,12 @@ public:
         UUIDerMainWindow->setWindowTitle(QApplication::translate("UUIDerMainWindow", "UUIDer", 0));
         action->setText(QApplication::translate("UUIDerMainWindow", "???", 0));
         actionAbout->setText(QApplication::translate("UUIDerMainWindow", "About", 0));
-        pushButton->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
+#ifndef QT_NO_TOOLTIP
+        Button_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
+#endif // QT_NO_TOOLTIP
+        Button_GenNewUUID->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
         label->setText(QApplication::translate("UUIDerMainWindow", "UUID's", 0));
-        pushButton_2->setText(QApplication::translate("UUIDerMainWindow", "Get", 0));
+        Button_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Get", 0));
         label_2->setText(QApplication::translate("UUIDerMainWindow", "UUID's", 0));
         label_3->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
         label_4->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
