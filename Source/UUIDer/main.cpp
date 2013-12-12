@@ -1,11 +1,11 @@
 #include "mainwindow.h"
 #include <QApplication>
 
-int main(const int argc, const char * const argv[])
+int main(int p_Argc, char * p_Argv[])
 {
-	QApplication a(argc, argv);
-	MainWindow w(nullptr);
-	w.show();
+    QApplication app(p_Argc, p_Argv);
+    MainWindow main_window(nullptr);
+    main_window.show();
 
-	return a.exec();
+    return app.exec();
 }
