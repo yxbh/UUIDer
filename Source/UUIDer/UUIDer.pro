@@ -4,20 +4,22 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT      += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = UUIDer
-TEMPLATE = app
+TARGET 		= UUIDer
+TEMPLATE 	= app
 
 # header files.
-HEADERS  += UUIDerMainWindow.hpp
+HEADERS  += UUIDerMainWindow.hpp \
+    UUIDDatabase.hpp
 #
 
 # source files.
 SOURCES += main.cpp\
-        UUIDerMainWindow.cpp
+        UUIDerMainWindow.cpp \
+    UUIDDatabase.cpp
 #
 
 # forms
@@ -25,5 +27,6 @@ FORMS    += UUIDerMainWindow.ui
 #
 
 # compile flags
--CONFIG += C++11
+CONFIG += C++11
+QMAKE_CXXFLAGS_WARN_ON
 #
