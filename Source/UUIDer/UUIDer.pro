@@ -12,12 +12,20 @@ TARGET = UUIDer
 TEMPLATE = app
 
 
+# header files.
+HEADERS  += \
+	UUIDerMainWindow.hpp
+#
+
+# source files.
 SOURCES += main.cpp \
     UUIDerMainWindow.cpp
+#
 
-HEADERS  += \
-    UUIDerMainWindow.hpp
 
+# GUI forms
 FORMS    += mainwindow.ui
+#
 
+# compilation flags
 CONFIG += c++11
