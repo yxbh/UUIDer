@@ -12,10 +12,11 @@ TARGET = UUIDer
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    UUIDerMainWindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    UUIDerMainWindow.hpp
 
 FORMS    += mainwindow.ui
 
