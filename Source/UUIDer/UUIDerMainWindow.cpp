@@ -3,6 +3,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include "UUIDDatabase.hpp"
+#include "UUIDerAboutDialog.hpp"
 
 UUIDerMainWindow::UUIDerMainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -40,5 +41,6 @@ void UUIDerMainWindow::on_actionNew_triggered()
 
 void UUIDerMainWindow::on_actionAbout_triggered()
 {
-
+    UUIDerAboutDialog *  about_dialog_ptr = new UUIDerAboutDialog(this);
+    about_dialog_ptr->show();
 }

@@ -16,7 +16,8 @@ HEADERS  += UUIDerMainWindow.hpp \
     UUIDDatabase.hpp \
     UUIDTypes.hpp \
     UUIDGenerator.hpp \
-    QUuid_Ext.hpp
+    QUuid_Ext.hpp \
+    UUIDerAboutDialog.hpp
 #
 
 # source files.
@@ -24,11 +25,13 @@ SOURCES += main.cpp\
         UUIDerMainWindow.cpp \
     UUIDDatabase.cpp \
     UUIDGenerator.cpp \
-    QUuid_Ext.cpp
+    QUuid_Ext.cpp \
+    UUIDerAboutDialog.cpp
 #
 
 # forms
-FORMS    += UUIDerMainWindow.ui
+FORMS    += UUIDerMainWindow.ui \
+    UUIDerAboutDialog.ui
 #
 
 # compile flags
