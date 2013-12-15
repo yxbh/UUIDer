@@ -42,3 +42,10 @@ void UUIDerMainWindow::on_actionAbout_triggered()
     static UUIDerAboutDialog * about_dialog_ptr(new UUIDerAboutDialog(this));
     about_dialog_ptr->show();
 }
+
+void UUIDerMainWindow::on_Button_GenNewUUID_clicked()
+{
+    const unsigned num_UUID_to_gen(ui->SpinBox_NumUUIDToGen->value());
+
+    // TODO : implementation.
+}

@@ -20,6 +20,8 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_Button_GenNewUUID_clicked();
+
 private:
     Ui::UUIDerMainWindow *ui;
 };

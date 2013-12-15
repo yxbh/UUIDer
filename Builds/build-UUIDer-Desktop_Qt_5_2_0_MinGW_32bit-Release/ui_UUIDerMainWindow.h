@@ -45,7 +45,7 @@ public:
     QLabel *Label_CurDBHeader;
     QLabel *Label_CurDB;
     QSpacerItem *horizontalSpacer_2;
-    QGroupBox *UUIDGenGroupBox;
+    QGroupBox *GroupBox_UUIDGen;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -62,10 +62,10 @@ public:
     QSpacerItem *horizontalSpacer_4;
     QPushButton *Button_GetUUIDs;
     QSpacerItem *horizontalSpacer_3;
-    QGroupBox *UUIDDisplayGroupBox;
+    QGroupBox *GroupBox_UUIDDisplay;
     QVBoxLayout *verticalLayout_3;
-    QTextBrowser *textBrowser;
-    QPushButton *pushButton;
+    QTextBrowser *TextBrowser_UUIDs;
+    QPushButton *Button_ClearTextBrowser;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_3;
     QLabel *label_4;
@@ -119,16 +119,16 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_4);
 
-        UUIDGenGroupBox = new QGroupBox(centralWidget);
-        UUIDGenGroupBox->setObjectName(QStringLiteral("UUIDGenGroupBox"));
-        verticalLayout = new QVBoxLayout(UUIDGenGroupBox);
+        GroupBox_UUIDGen = new QGroupBox(centralWidget);
+        GroupBox_UUIDGen->setObjectName(QStringLiteral("GroupBox_UUIDGen"));
+        verticalLayout = new QVBoxLayout(GroupBox_UUIDGen);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label = new QLabel(UUIDGenGroupBox);
+        label = new QLabel(GroupBox_UUIDGen);
         label->setObjectName(QStringLiteral("label"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -138,7 +138,7 @@ public:
 
         horizontalLayout->addWidget(label);
 
-        SpinBox_NumUUIDToGen = new QSpinBox(UUIDGenGroupBox);
+        SpinBox_NumUUIDToGen = new QSpinBox(GroupBox_UUIDGen);
         SpinBox_NumUUIDToGen->setObjectName(QStringLiteral("SpinBox_NumUUIDToGen"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
@@ -158,7 +158,7 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        Button_GenNewUUID = new QPushButton(UUIDGenGroupBox);
+        Button_GenNewUUID = new QPushButton(GroupBox_UUIDGen);
         Button_GenNewUUID->setObjectName(QStringLiteral("Button_GenNewUUID"));
         QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
@@ -169,7 +169,7 @@ public:
 
         horizontalLayout_5->addWidget(Button_GenNewUUID);
 
-        Button_GenNewUUIDForDB = new QPushButton(UUIDGenGroupBox);
+        Button_GenNewUUIDForDB = new QPushButton(GroupBox_UUIDGen);
         Button_GenNewUUIDForDB->setObjectName(QStringLiteral("Button_GenNewUUIDForDB"));
         sizePolicy2.setHeightForWidth(Button_GenNewUUIDForDB->sizePolicy().hasHeightForWidth());
         Button_GenNewUUIDForDB->setSizePolicy(sizePolicy2);
@@ -181,7 +181,7 @@ public:
         verticalLayout->addLayout(horizontalLayout_5);
 
 
-        verticalLayout_4->addWidget(UUIDGenGroupBox);
+        verticalLayout_4->addWidget(GroupBox_UUIDGen);
 
         UUIDRetrievalGroupBox = new QGroupBox(centralWidget);
         UUIDRetrievalGroupBox->setObjectName(QStringLiteral("UUIDRetrievalGroupBox"));
@@ -239,24 +239,24 @@ public:
 
         verticalLayout_4->addWidget(UUIDRetrievalGroupBox);
 
-        UUIDDisplayGroupBox = new QGroupBox(centralWidget);
-        UUIDDisplayGroupBox->setObjectName(QStringLiteral("UUIDDisplayGroupBox"));
-        verticalLayout_3 = new QVBoxLayout(UUIDDisplayGroupBox);
+        GroupBox_UUIDDisplay = new QGroupBox(centralWidget);
+        GroupBox_UUIDDisplay->setObjectName(QStringLiteral("GroupBox_UUIDDisplay"));
+        verticalLayout_3 = new QVBoxLayout(GroupBox_UUIDDisplay);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        textBrowser = new QTextBrowser(UUIDDisplayGroupBox);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        TextBrowser_UUIDs = new QTextBrowser(GroupBox_UUIDDisplay);
+        TextBrowser_UUIDs->setObjectName(QStringLiteral("TextBrowser_UUIDs"));
 
-        verticalLayout_3->addWidget(textBrowser);
+        verticalLayout_3->addWidget(TextBrowser_UUIDs);
 
-        pushButton = new QPushButton(UUIDDisplayGroupBox);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        Button_ClearTextBrowser = new QPushButton(GroupBox_UUIDDisplay);
+        Button_ClearTextBrowser->setObjectName(QStringLiteral("Button_ClearTextBrowser"));
 
-        verticalLayout_3->addWidget(pushButton);
+        verticalLayout_3->addWidget(Button_ClearTextBrowser);
 
 
-        verticalLayout_4->addWidget(UUIDDisplayGroupBox);
+        verticalLayout_4->addWidget(GroupBox_UUIDDisplay);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
@@ -323,7 +323,7 @@ public:
         actionNew->setText(QApplication::translate("UUIDerMainWindow", "New", 0));
         Label_CurDBHeader->setText(QApplication::translate("UUIDerMainWindow", "Current DB: ", 0));
         Label_CurDB->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
-        UUIDGenGroupBox->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Generation", 0));
+        GroupBox_UUIDGen->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Generation", 0));
         label->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to generate: ", 0));
 #ifndef QT_NO_TOOLTIP
         Button_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
@@ -342,8 +342,8 @@ public:
         Button_GetUUIDs->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
         Button_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Retrieve", 0));
-        UUIDDisplayGroupBox->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Display", 0));
-        pushButton->setText(QApplication::translate("UUIDerMainWindow", "Clear", 0));
+        GroupBox_UUIDDisplay->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Display", 0));
+        Button_ClearTextBrowser->setText(QApplication::translate("UUIDerMainWindow", "Clear", 0));
         label_3->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
         label_4->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
         menuFile->setTitle(QApplication::translate("UUIDerMainWindow", "File", 0));

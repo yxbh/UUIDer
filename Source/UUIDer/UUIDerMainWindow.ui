@@ -49,7 +49,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QGroupBox" name="UUIDGenGroupBox">
+       <widget class="QGroupBox" name="GroupBox_UUIDGen">
         <property name="title">
          <string>UUID Generation</string>
         </property>
@@ -254,16 +254,16 @@
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="UUIDDisplayGroupBox">
+       <widget class="QGroupBox" name="GroupBox_UUIDDisplay">
         <property name="title">
          <string>UUID Display</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QTextBrowser" name="textBrowser"/>
+          <widget class="QTextBrowser" name="TextBrowser_UUIDs"/>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="Button_ClearTextBrowser">
            <property name="text">
             <string>Clear</string>
            </property>
