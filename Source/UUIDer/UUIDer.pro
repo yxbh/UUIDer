@@ -14,13 +14,17 @@ TEMPLATE 	= app
 # header files.
 HEADERS  += UUIDerMainWindow.hpp \
     UUIDDatabase.hpp \
-    UUIDTypes.hpp
+    UUIDTypes.hpp \
+    UUIDGenerator.hpp \
+    QUuid_Ext.hpp
 #
 
 # source files.
 SOURCES += main.cpp\
         UUIDerMainWindow.cpp \
-    UUIDDatabase.cpp
+    UUIDDatabase.cpp \
+    UUIDGenerator.cpp \
+    QUuid_Ext.cpp
 #
 
 # forms
