@@ -57,7 +57,7 @@ void UUIDerMainWindow::on_Button_GenNewUUID_clicked()
         uuid_ver = BH::UUIDGenerator::UUIDVer::V5;
     else
     {
-        assert(false);
+        ui->statusBar->showMessage(QString("Invalid generator type!"));
         return;
     }
     ////
@@ -73,13 +73,23 @@ void UUIDerMainWindow::on_Button_GenNewUUID_clicked()
     }
     ////
 
+    //// Begin UUID generation.
     const unsigned num_UUID_to_gen(ui->SpinBox_NumUUIDToGen->value());
     auto display_box(ui->TextBrowser_UUIDs);
     display_box->clear();
     QString UUIDs;
+    ui->statusBar->showMessage(QString("Begining UUID generation..."));
     for (unsigned i{0}; i != num_UUID_to_gen; ++i)
     {
         UUIDs += BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, uuid_data).toString() + '\n';
     }
     display_box->setText(UUIDs);
+    ////
+
+    //// Finished! Report status.
+    if (num_UUID_to_gen > 1)
+        ui->statusBar->showMessage(QString::number(num_UUID_to_gen) + QString(" UUIDs were generated."));
+    else
+        ui->statusBar->showMessage(QString("1 UUID was generated."));
+    ////
 }

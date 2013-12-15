@@ -44,7 +44,6 @@ public:
     QAction *actionOpen_DB;
     QAction *actionNew;
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_6;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_4;
     QLabel *Label_CurDBHeader;
@@ -87,9 +86,9 @@ public:
     QTextBrowser *TextBrowser_UUIDs;
     QPushButton *Button_ClearTextBrowser;
     QHBoxLayout *horizontalLayout_3;
-    QLabel *label_3;
-    QLabel *label_4;
     QSpacerItem *horizontalSpacer;
+    QPushButton *PushButton_ExitUUIDer;
+    QSpacerItem *horizontalSpacer_5;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -113,12 +112,9 @@ public:
         actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(UUIDerMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_6 = new QVBoxLayout(centralWidget);
-        verticalLayout_6->setSpacing(6);
-        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5 = new QVBoxLayout(centralWidget);
         verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
@@ -246,7 +242,6 @@ public:
 
         gridLayout->addWidget(Frame_GenSpecOptions_NSAndData, 0, 0, 1, 1);
 
-        Frame_GenSpecOptions_NSAndData->raise();
 
         horizontalLayout_7->addWidget(GroupBox_GenSpecificOptions);
 
@@ -389,25 +384,21 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        horizontalLayout_3->addWidget(label_3);
-
-        label_4 = new QLabel(centralWidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-
-        horizontalLayout_3->addWidget(label_4);
-
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer);
 
+        PushButton_ExitUUIDer = new QPushButton(centralWidget);
+        PushButton_ExitUUIDer->setObjectName(QStringLiteral("PushButton_ExitUUIDer"));
+
+        horizontalLayout_3->addWidget(PushButton_ExitUUIDer);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_5);
+
 
         verticalLayout_5->addLayout(horizontalLayout_3);
-
-
-        verticalLayout_6->addLayout(verticalLayout_5);
 
         UUIDerMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UUIDerMainWindow);
@@ -438,6 +429,7 @@ public:
         QObject::connect(RadioButton_GenType_Random, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(hide()));
         QObject::connect(RadioButton_GenType_V5, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
         QObject::connect(RadioButton_GenType_V3, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
+        QObject::connect(PushButton_ExitUUIDer, SIGNAL(clicked()), UUIDerMainWindow, SLOT(close()));
 
         QMetaObject::connectSlotsByName(UUIDerMainWindow);
     } // setupUi
@@ -482,8 +474,7 @@ public:
         Button_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Retrieve", 0));
         GroupBox_UUIDDisplay->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Display", 0));
         Button_ClearTextBrowser->setText(QApplication::translate("UUIDerMainWindow", "Clear", 0));
-        label_3->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
-        label_4->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
+        PushButton_ExitUUIDer->setText(QApplication::translate("UUIDerMainWindow", "Exit", 0));
         menuFile->setTitle(QApplication::translate("UUIDerMainWindow", "File", 0));
         menuHelp->setTitle(QApplication::translate("UUIDerMainWindow", "Help", 0));
     } // retranslateUi
