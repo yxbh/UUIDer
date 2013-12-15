@@ -70,8 +70,8 @@ public:
     QLabel *label;
     QSpinBox *SpinBox_NumUUIDToGen;
     QHBoxLayout *horizontalLayout_5;
-    QPushButton *Button_GenNewUUID;
-    QPushButton *Button_GenNewUUIDForDB;
+    QPushButton *PushButton_GenNewUUID;
+    QPushButton *PushButton_GenNewUUIDForDB;
     QGroupBox *UUIDRetrievalGroupBox;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_2;
@@ -79,7 +79,7 @@ public:
     QSpinBox *SpinBox_NumUUIDToGet;
     QHBoxLayout *horizontalLayout_6;
     QSpacerItem *horizontalSpacer_4;
-    QPushButton *Button_GetUUIDs;
+    QPushButton *PushButton_GetUUIDs;
     QSpacerItem *horizontalSpacer_3;
     QGroupBox *GroupBox_UUIDDisplay;
     QVBoxLayout *verticalLayout_3;
@@ -281,21 +281,21 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        Button_GenNewUUID = new QPushButton(GroupBox_UUIDGen);
-        Button_GenNewUUID->setObjectName(QStringLiteral("Button_GenNewUUID"));
-        sizePolicy2.setHeightForWidth(Button_GenNewUUID->sizePolicy().hasHeightForWidth());
-        Button_GenNewUUID->setSizePolicy(sizePolicy2);
-        Button_GenNewUUID->setMinimumSize(QSize(100, 0));
+        PushButton_GenNewUUID = new QPushButton(GroupBox_UUIDGen);
+        PushButton_GenNewUUID->setObjectName(QStringLiteral("PushButton_GenNewUUID"));
+        sizePolicy2.setHeightForWidth(PushButton_GenNewUUID->sizePolicy().hasHeightForWidth());
+        PushButton_GenNewUUID->setSizePolicy(sizePolicy2);
+        PushButton_GenNewUUID->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout_5->addWidget(Button_GenNewUUID);
+        horizontalLayout_5->addWidget(PushButton_GenNewUUID);
 
-        Button_GenNewUUIDForDB = new QPushButton(GroupBox_UUIDGen);
-        Button_GenNewUUIDForDB->setObjectName(QStringLiteral("Button_GenNewUUIDForDB"));
-        sizePolicy2.setHeightForWidth(Button_GenNewUUIDForDB->sizePolicy().hasHeightForWidth());
-        Button_GenNewUUIDForDB->setSizePolicy(sizePolicy2);
-        Button_GenNewUUIDForDB->setMinimumSize(QSize(100, 0));
+        PushButton_GenNewUUIDForDB = new QPushButton(GroupBox_UUIDGen);
+        PushButton_GenNewUUIDForDB->setObjectName(QStringLiteral("PushButton_GenNewUUIDForDB"));
+        sizePolicy2.setHeightForWidth(PushButton_GenNewUUIDForDB->sizePolicy().hasHeightForWidth());
+        PushButton_GenNewUUIDForDB->setSizePolicy(sizePolicy2);
+        PushButton_GenNewUUIDForDB->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout_5->addWidget(Button_GenNewUUIDForDB);
+        horizontalLayout_5->addWidget(PushButton_GenNewUUIDForDB);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -341,13 +341,13 @@ public:
 
         horizontalLayout_6->addItem(horizontalSpacer_4);
 
-        Button_GetUUIDs = new QPushButton(UUIDRetrievalGroupBox);
-        Button_GetUUIDs->setObjectName(QStringLiteral("Button_GetUUIDs"));
-        sizePolicy2.setHeightForWidth(Button_GetUUIDs->sizePolicy().hasHeightForWidth());
-        Button_GetUUIDs->setSizePolicy(sizePolicy2);
-        Button_GetUUIDs->setMinimumSize(QSize(100, 0));
+        PushButton_GetUUIDs = new QPushButton(UUIDRetrievalGroupBox);
+        PushButton_GetUUIDs->setObjectName(QStringLiteral("PushButton_GetUUIDs"));
+        sizePolicy2.setHeightForWidth(PushButton_GetUUIDs->sizePolicy().hasHeightForWidth());
+        PushButton_GetUUIDs->setSizePolicy(sizePolicy2);
+        PushButton_GetUUIDs->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout_6->addWidget(Button_GetUUIDs);
+        horizontalLayout_6->addWidget(PushButton_GetUUIDs);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -456,22 +456,22 @@ public:
         LineEdit_UUIDGen_Data->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
         label->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to generate: ", 0));
 #ifndef QT_NO_TOOLTIP
-        Button_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
+        PushButton_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
 #endif // QT_NO_TOOLTIP
-        Button_GenNewUUID->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
+        PushButton_GenNewUUID->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
 #ifndef QT_NO_TOOLTIP
-        Button_GenNewUUIDForDB->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate UUID/s and store into current database.", 0));
+        PushButton_GenNewUUIDForDB->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate UUID/s and store into current database.", 0));
 #endif // QT_NO_TOOLTIP
-        Button_GenNewUUIDForDB->setText(QApplication::translate("UUIDerMainWindow", "Generate for DB", 0));
+        PushButton_GenNewUUIDForDB->setText(QApplication::translate("UUIDerMainWindow", "Generate for DB", 0));
         UUIDRetrievalGroupBox->setTitle(QApplication::translate("UUIDerMainWindow", "UUID DB Retrieval", 0));
         label_2->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to retrieve: ", 0));
 #ifndef QT_NO_TOOLTIP
-        Button_GetUUIDs->setToolTip(QApplication::translate("UUIDerMainWindow", "Get UUID/s from the current database.", 0));
+        PushButton_GetUUIDs->setToolTip(QApplication::translate("UUIDerMainWindow", "Get UUID/s from the current database.", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
-        Button_GetUUIDs->setWhatsThis(QString());
+        PushButton_GetUUIDs->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
-        Button_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Retrieve", 0));
+        PushButton_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Retrieve", 0));
         GroupBox_UUIDDisplay->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Display", 0));
         Button_ClearTextBrowser->setText(QApplication::translate("UUIDerMainWindow", "Clear", 0));
         PushButton_ExitUUIDer->setText(QApplication::translate("UUIDerMainWindow", "Exit", 0));

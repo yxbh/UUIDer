@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UUIDerMainWindow_t {
     QByteArrayData data[5];
-    char stringdata[96];
+    char stringdata[100];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ QT_MOC_LITERAL(0, 0, 16),
 QT_MOC_LITERAL(1, 17, 22),
 QT_MOC_LITERAL(2, 40, 0),
 QT_MOC_LITERAL(3, 41, 24),
-QT_MOC_LITERAL(4, 66, 28)
+QT_MOC_LITERAL(4, 66, 32)
     },
     "UUIDerMainWindow\0on_actionNew_triggered\0"
     "\0on_actionAbout_triggered\0"
-    "on_Button_GenNewUUID_clicked\0"
+    "on_PushButton_GenNewUUID_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,7 +74,7 @@ void UUIDerMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         switch (_id) {
         case 0: _t->on_actionNew_triggered(); break;
         case 1: _t->on_actionAbout_triggered(); break;
-        case 2: _t->on_Button_GenNewUUID_clicked(); break;
+        case 2: _t->on_PushButton_GenNewUUID_clicked(); break;
         default: ;
         }
     }

@@ -259,7 +259,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_5">
          <item>
-          <widget class="QPushButton" name="Button_GenNewUUID">
+          <widget class="QPushButton" name="PushButton_GenNewUUID">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -281,7 +281,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="Button_GenNewUUIDForDB">
+          <widget class="QPushButton" name="PushButton_GenNewUUIDForDB">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -362,7 +362,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="Button_GetUUIDs">
+          <widget class="QPushButton" name="PushButton_GetUUIDs">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>

@@ -45,7 +45,7 @@ void UUIDerMainWindow::on_actionAbout_triggered()
     about_dialog_ptr->show();
 }
 
-void UUIDerMainWindow::on_Button_GenNewUUID_clicked()
+void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
 {
     //// get specified generator type.
     BH::UUIDGenerator::UUIDVer uuid_ver;
