@@ -37,3 +37,8 @@ void UUIDerMainWindow::on_actionNew_triggered()
     else
         qDebug() << "UUIDerMainWindow::on_actionNew_triggered : action cancelled.";
 }
+
+void UUIDerMainWindow::on_actionAbout_triggered()
+{
+
+}

@@ -37,17 +37,18 @@ public:
     QAction *actionOpen_DB;
     QAction *actionNew;
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_4;
     QLabel *Label_CurDBHeader;
     QLabel *Label_CurDB;
     QSpacerItem *horizontalSpacer_2;
-    QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout;
-    QPushButton *Button_GenNewUUID;
-    QSpinBox *SpinBox_NumUUIDToGen;
     QLabel *label;
+    QSpinBox *SpinBox_NumUUIDToGen;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *Button_GenNewUUID;
+    QPushButton *Button_GenNewUUIDForDB;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *Button_GetUUIDs;
     QSpinBox *SpinBox_NumUUIDToGet;
@@ -67,7 +68,7 @@ public:
     {
         if (UUIDerMainWindow->objectName().isEmpty())
             UUIDerMainWindow->setObjectName(QStringLiteral("UUIDerMainWindow"));
-        UUIDerMainWindow->resize(422, 265);
+        UUIDerMainWindow->resize(228, 321);
         action = new QAction(UUIDerMainWindow);
         action->setObjectName(QStringLiteral("action"));
         actionAbout = new QAction(UUIDerMainWindow);
@@ -78,10 +79,10 @@ public:
         actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(UUIDerMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_3 = new QVBoxLayout(centralWidget);
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_2 = new QVBoxLayout(centralWidget);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -105,23 +106,18 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_4);
 
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
-        Button_GenNewUUID = new QPushButton(centralWidget);
-        Button_GenNewUUID->setObjectName(QStringLiteral("Button_GenNewUUID"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(Button_GenNewUUID->sizePolicy().hasHeightForWidth());
-        Button_GenNewUUID->setSizePolicy(sizePolicy);
-        Button_GenNewUUID->setMinimumSize(QSize(100, 0));
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
 
-        horizontalLayout->addWidget(Button_GenNewUUID);
+        horizontalLayout->addWidget(label);
 
         SpinBox_NumUUIDToGen = new QSpinBox(centralWidget);
         SpinBox_NumUUIDToGen->setObjectName(QStringLiteral("SpinBox_NumUUIDToGen"));
@@ -137,29 +133,41 @@ public:
 
         horizontalLayout->addWidget(SpinBox_NumUUIDToGen);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        Button_GenNewUUID = new QPushButton(centralWidget);
+        Button_GenNewUUID->setObjectName(QStringLiteral("Button_GenNewUUID"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy2);
+        sizePolicy2.setHeightForWidth(Button_GenNewUUID->sizePolicy().hasHeightForWidth());
+        Button_GenNewUUID->setSizePolicy(sizePolicy2);
+        Button_GenNewUUID->setMinimumSize(QSize(100, 0));
 
-        horizontalLayout->addWidget(label);
+        horizontalLayout_5->addWidget(Button_GenNewUUID);
+
+        Button_GenNewUUIDForDB = new QPushButton(centralWidget);
+        Button_GenNewUUIDForDB->setObjectName(QStringLiteral("Button_GenNewUUIDForDB"));
+        sizePolicy2.setHeightForWidth(Button_GenNewUUIDForDB->sizePolicy().hasHeightForWidth());
+        Button_GenNewUUIDForDB->setSizePolicy(sizePolicy2);
+        Button_GenNewUUIDForDB->setMinimumSize(QSize(100, 0));
+
+        horizontalLayout_5->addWidget(Button_GenNewUUIDForDB);
 
 
-        verticalLayout_2->addLayout(horizontalLayout);
-
-
-        verticalLayout->addLayout(verticalLayout_2);
+        verticalLayout->addLayout(horizontalLayout_5);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         Button_GetUUIDs = new QPushButton(centralWidget);
         Button_GetUUIDs->setObjectName(QStringLiteral("Button_GetUUIDs"));
-        sizePolicy.setHeightForWidth(Button_GetUUIDs->sizePolicy().hasHeightForWidth());
-        Button_GetUUIDs->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(Button_GetUUIDs->sizePolicy().hasHeightForWidth());
+        Button_GetUUIDs->setSizePolicy(sizePolicy2);
         Button_GetUUIDs->setMinimumSize(QSize(100, 0));
 
         horizontalLayout_2->addWidget(Button_GetUUIDs);
@@ -211,12 +219,12 @@ public:
         verticalLayout->addItem(verticalSpacer);
 
 
-        verticalLayout_3->addLayout(verticalLayout);
+        verticalLayout_2->addLayout(verticalLayout);
 
         UUIDerMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UUIDerMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 422, 21));
+        menuBar->setGeometry(QRect(0, 0, 228, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menuHelp = new QMenu(menuBar);
@@ -251,11 +259,21 @@ public:
         actionNew->setText(QApplication::translate("UUIDerMainWindow", "New", 0));
         Label_CurDBHeader->setText(QApplication::translate("UUIDerMainWindow", "Current DB: ", 0));
         Label_CurDB->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
+        label->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to generate: ", 0));
 #ifndef QT_NO_TOOLTIP
         Button_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
 #endif // QT_NO_TOOLTIP
         Button_GenNewUUID->setText(QApplication::translate("UUIDerMainWindow", "Generate", 0));
-        label->setText(QApplication::translate("UUIDerMainWindow", "UUID's", 0));
+#ifndef QT_NO_TOOLTIP
+        Button_GenNewUUIDForDB->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate UUID/s and store into current database.", 0));
+#endif // QT_NO_TOOLTIP
+        Button_GenNewUUIDForDB->setText(QApplication::translate("UUIDerMainWindow", "Generate for DB", 0));
+#ifndef QT_NO_TOOLTIP
+        Button_GetUUIDs->setToolTip(QApplication::translate("UUIDerMainWindow", "Get UUID/s from the current database.", 0));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_WHATSTHIS
+        Button_GetUUIDs->setWhatsThis(QString());
+#endif // QT_NO_WHATSTHIS
         Button_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Get", 0));
         label_2->setText(QApplication::translate("UUIDerMainWindow", "UUID's", 0));
         label_3->setText(QApplication::translate("UUIDerMainWindow", "TextLabel", 0));
