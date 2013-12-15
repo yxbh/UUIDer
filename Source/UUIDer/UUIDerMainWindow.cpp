@@ -28,12 +28,10 @@ void UUIDerMainWindow::on_actionNew_triggered()
     {
         if (BH::UUIDDatabase::InitConnection(path))
         {
-
+            // TODO : implementation.
         }
         else
-        {
             QMessageBox::critical(this, "Failure", "Failure to open DB file!");
-        }
     }
     else
         qDebug() << "UUIDerMainWindow::on_actionNew_triggered : action cancelled.";
@@ -41,6 +39,6 @@ void UUIDerMainWindow::on_actionNew_triggered()
 
 void UUIDerMainWindow::on_actionAbout_triggered()
 {
-    UUIDerAboutDialog *  about_dialog_ptr = new UUIDerAboutDialog(this);
+    static UUIDerAboutDialog * about_dialog_ptr(new UUIDerAboutDialog(this));
     about_dialog_ptr->show();
 }

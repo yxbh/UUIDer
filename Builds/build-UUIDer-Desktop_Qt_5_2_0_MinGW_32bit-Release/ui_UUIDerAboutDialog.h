@@ -27,13 +27,13 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QTextBrowser *textBrowser;
-    QPushButton *pushButton;
+    QPushButton *CloseDialogButton;
 
     void setupUi(QDialog *UUIDerAboutDialog)
     {
         if (UUIDerAboutDialog->objectName().isEmpty())
             UUIDerAboutDialog->setObjectName(QStringLiteral("UUIDerAboutDialog"));
-        UUIDerAboutDialog->resize(301, 216);
+        UUIDerAboutDialog->resize(301, 202);
         verticalLayout_2 = new QVBoxLayout(UUIDerAboutDialog);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
@@ -43,16 +43,17 @@ public:
 
         verticalLayout->addWidget(textBrowser);
 
-        pushButton = new QPushButton(UUIDerAboutDialog);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        CloseDialogButton = new QPushButton(UUIDerAboutDialog);
+        CloseDialogButton->setObjectName(QStringLiteral("CloseDialogButton"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(CloseDialogButton);
 
 
         verticalLayout_2->addLayout(verticalLayout);
 
 
         retranslateUi(UUIDerAboutDialog);
+        QObject::connect(CloseDialogButton, SIGNAL(clicked()), UUIDerAboutDialog, SLOT(close()));
 
         QMetaObject::connectSlotsByName(UUIDerAboutDialog);
     } // setupUi
@@ -70,13 +71,16 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0p"
                         "x; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">A simple UUID generator &amp; storer.</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Author</span><span style=\" font-size:8pt;\">: YanXiang Huang</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Author</span><span style=\" font-size:8pt;\">: YanXiang Benjamin Huang</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Copyright Infinity Box Studios 2013 \302\251.</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;"
-                        "\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-"
+                        "size:8pt;\"><br /></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Check us out at:</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"htttp://www.InfinityBoxStudios.com\"><span style=\" font-size:8pt; text-decoration: underline; color:#0000ff;\">htttp://www.InfinityBoxStudios.com</span></a></p></body></html>", 0));
-        pushButton->setText(QApplication::translate("UUIDerAboutDialog", "Close", 0));
+#ifndef QT_NO_TOOLTIP
+        CloseDialogButton->setToolTip(QApplication::translate("UUIDerAboutDialog", "Close this dialog.", 0));
+#endif // QT_NO_TOOLTIP
+        CloseDialogButton->setText(QApplication::translate("UUIDerAboutDialog", "Close", 0));
     } // retranslateUi
 
 };

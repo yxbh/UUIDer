@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>301</width>
-    <height>216</height>
+    <height>202</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,10 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="CloseDialogButton">
+       <property name="toolTip">
+        <string>Close this dialog.</string>
+       </property>
        <property name="text">
         <string>Close</string>
        </property>
@@ -48,5 +51,22 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>CloseDialogButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UUIDerAboutDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
