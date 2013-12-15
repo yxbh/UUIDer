@@ -271,7 +271,7 @@ public:
         SpinBox_NumUUIDToGen->setMinimumSize(QSize(0, 0));
         SpinBox_NumUUIDToGen->setBaseSize(QSize(0, 0));
         SpinBox_NumUUIDToGen->setMinimum(1);
-        SpinBox_NumUUIDToGen->setMaximum(1000);
+        SpinBox_NumUUIDToGen->setMaximum(5000);
 
         horizontalLayout->addWidget(SpinBox_NumUUIDToGen);
 
