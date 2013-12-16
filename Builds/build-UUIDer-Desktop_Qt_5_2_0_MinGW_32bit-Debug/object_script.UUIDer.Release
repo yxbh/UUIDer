@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\UUIDerMainWindow.o
+./release\UUIDDatabase.o
+./release\UUIDGenerator.o
+./release\QUuid_Ext.o
+./release\UUIDerAboutDialog.o
+./release\UUIDerApp.o
+./release\RandomStringGenerator.o
+./release\moc_UUIDerMainWindow.o
+./release\moc_UUIDerAboutDialog.o
+);

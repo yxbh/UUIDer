@@ -13,7 +13,7 @@ QUuid UUIDGenerator::GenNewUUID(const UUIDVer p_UUIDType, const QString & p_rNS,
     case UUIDVer::V5:
         return QUuid::createUuidV5(p_rNS, p_rData);
     case UUIDVer::V3:
-        return QUuid::createUuidV3(p_rNS,p_rData);
+        return QUuid::createUuidV3(p_rNS, p_rData);
     case UUIDVer::Random:
         return QUuid::createUuid();
 
