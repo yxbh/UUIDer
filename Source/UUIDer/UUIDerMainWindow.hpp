@@ -22,6 +22,12 @@ private slots:
 
     void on_PushButton_GenNewUUID_clicked();
 
+    void on_CheckBox_DisplayCurlyBraces_stateChanged(int arg1);
+
+    void on_CheckBox_DisplayUpperCases_stateChanged(int arg1);
+
+    void on_CheckBox_DisplayHypens_stateChanged(int arg1);
+
 private:
     Ui::UUIDerMainWindow *ui;
 };

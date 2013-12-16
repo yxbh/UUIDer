@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
@@ -44,7 +45,7 @@ public:
     QAction *actionOpen_DB;
     QAction *actionNew;
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_5;
+    QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout_4;
     QLabel *Label_CurDBHeader;
     QLabel *Label_CurDB;
@@ -56,8 +57,8 @@ public:
     QVBoxLayout *verticalLayout_4;
     QRadioButton *RadioButton_GenType_Unknown;
     QRadioButton *RadioButton_GenType_V3;
+    QRadioButton *RadioButton_GenType_V4;
     QRadioButton *RadioButton_GenType_V5;
-    QRadioButton *RadioButton_GenType_Random;
     QGroupBox *GroupBox_GenSpecificOptions;
     QGridLayout *gridLayout;
     QFrame *Frame_GenSpecOptions_NSAndData;
@@ -66,6 +67,8 @@ public:
     QLineEdit *LineEdit_UUIDGen_Namespace;
     QLabel *Label_UUIDGenData;
     QLineEdit *LineEdit_UUIDGen_Data;
+    QCheckBox *checkBox;
+    QLabel *label_3;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpinBox *SpinBox_NumUUIDToGen;
@@ -83,6 +86,12 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QGroupBox *GroupBox_UUIDDisplay;
     QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_8;
+    QVBoxLayout *verticalLayout_5;
+    QCheckBox *CheckBox_DisplayCurlyBraces;
+    QCheckBox *CheckBox_DisplayUpperCases;
+    QCheckBox *CheckBox_DisplayHypens;
+    QSpacerItem *verticalSpacer;
     QTextBrowser *TextBrowser_UUIDs;
     QPushButton *Button_ClearTextBrowser;
     QHBoxLayout *horizontalLayout_3;
@@ -112,10 +121,10 @@ public:
         actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(UUIDerMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_5 = new QVBoxLayout(centralWidget);
-        verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_6 = new QVBoxLayout(centralWidget);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
@@ -134,7 +143,7 @@ public:
         horizontalLayout_4->addItem(horizontalSpacer_2);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_4);
+        verticalLayout_6->addLayout(horizontalLayout_4);
 
         GroupBox_UUIDGen = new QGroupBox(centralWidget);
         GroupBox_UUIDGen->setObjectName(QStringLiteral("GroupBox_UUIDGen"));
@@ -178,20 +187,20 @@ public:
 
         verticalLayout_4->addWidget(RadioButton_GenType_V3);
 
+        RadioButton_GenType_V4 = new QRadioButton(GroupBox_GenType);
+        RadioButton_GenType_V4->setObjectName(QStringLiteral("RadioButton_GenType_V4"));
+        sizePolicy2.setHeightForWidth(RadioButton_GenType_V4->sizePolicy().hasHeightForWidth());
+        RadioButton_GenType_V4->setSizePolicy(sizePolicy2);
+        RadioButton_GenType_V4->setChecked(true);
+
+        verticalLayout_4->addWidget(RadioButton_GenType_V4);
+
         RadioButton_GenType_V5 = new QRadioButton(GroupBox_GenType);
         RadioButton_GenType_V5->setObjectName(QStringLiteral("RadioButton_GenType_V5"));
         sizePolicy2.setHeightForWidth(RadioButton_GenType_V5->sizePolicy().hasHeightForWidth());
         RadioButton_GenType_V5->setSizePolicy(sizePolicy2);
 
         verticalLayout_4->addWidget(RadioButton_GenType_V5);
-
-        RadioButton_GenType_Random = new QRadioButton(GroupBox_GenType);
-        RadioButton_GenType_Random->setObjectName(QStringLiteral("RadioButton_GenType_Random"));
-        sizePolicy2.setHeightForWidth(RadioButton_GenType_Random->sizePolicy().hasHeightForWidth());
-        RadioButton_GenType_Random->setSizePolicy(sizePolicy2);
-        RadioButton_GenType_Random->setChecked(true);
-
-        verticalLayout_4->addWidget(RadioButton_GenType_Random);
 
 
         horizontalLayout_7->addWidget(GroupBox_GenType);
@@ -238,6 +247,16 @@ public:
         LineEdit_UUIDGen_Data->setObjectName(QStringLiteral("LineEdit_UUIDGen_Data"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, LineEdit_UUIDGen_Data);
+
+        checkBox = new QCheckBox(Frame_GenSpecOptions_NSAndData);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, checkBox);
+
+        label_3 = new QLabel(Frame_GenSpecOptions_NSAndData);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
 
 
         gridLayout->addWidget(Frame_GenSpecOptions_NSAndData, 0, 0, 1, 1);
@@ -301,7 +320,7 @@ public:
         verticalLayout->addLayout(horizontalLayout_5);
 
 
-        verticalLayout_5->addWidget(GroupBox_UUIDGen);
+        verticalLayout_6->addWidget(GroupBox_UUIDGen);
 
         UUIDRetrievalGroupBox = new QGroupBox(centralWidget);
         UUIDRetrievalGroupBox->setObjectName(QStringLiteral("UUIDRetrievalGroupBox"));
@@ -357,7 +376,7 @@ public:
         verticalLayout_2->addLayout(horizontalLayout_6);
 
 
-        verticalLayout_5->addWidget(UUIDRetrievalGroupBox);
+        verticalLayout_6->addWidget(UUIDRetrievalGroupBox);
 
         GroupBox_UUIDDisplay = new QGroupBox(centralWidget);
         GroupBox_UUIDDisplay->setObjectName(QStringLiteral("GroupBox_UUIDDisplay"));
@@ -365,13 +384,58 @@ public:
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setSpacing(6);
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_5->setSizeConstraint(QLayout::SetDefaultConstraint);
+        CheckBox_DisplayCurlyBraces = new QCheckBox(GroupBox_UUIDDisplay);
+        CheckBox_DisplayCurlyBraces->setObjectName(QStringLiteral("CheckBox_DisplayCurlyBraces"));
+        sizePolicy3.setHeightForWidth(CheckBox_DisplayCurlyBraces->sizePolicy().hasHeightForWidth());
+        CheckBox_DisplayCurlyBraces->setSizePolicy(sizePolicy3);
+        CheckBox_DisplayCurlyBraces->setChecked(true);
+
+        verticalLayout_5->addWidget(CheckBox_DisplayCurlyBraces);
+
+        CheckBox_DisplayUpperCases = new QCheckBox(GroupBox_UUIDDisplay);
+        CheckBox_DisplayUpperCases->setObjectName(QStringLiteral("CheckBox_DisplayUpperCases"));
+        sizePolicy3.setHeightForWidth(CheckBox_DisplayUpperCases->sizePolicy().hasHeightForWidth());
+        CheckBox_DisplayUpperCases->setSizePolicy(sizePolicy3);
+
+        verticalLayout_5->addWidget(CheckBox_DisplayUpperCases);
+
+        CheckBox_DisplayHypens = new QCheckBox(GroupBox_UUIDDisplay);
+        CheckBox_DisplayHypens->setObjectName(QStringLiteral("CheckBox_DisplayHypens"));
+        sizePolicy3.setHeightForWidth(CheckBox_DisplayHypens->sizePolicy().hasHeightForWidth());
+        CheckBox_DisplayHypens->setSizePolicy(sizePolicy3);
+        CheckBox_DisplayHypens->setChecked(true);
+
+        verticalLayout_5->addWidget(CheckBox_DisplayHypens);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer);
+
+
+        horizontalLayout_8->addLayout(verticalLayout_5);
+
         TextBrowser_UUIDs = new QTextBrowser(GroupBox_UUIDDisplay);
         TextBrowser_UUIDs->setObjectName(QStringLiteral("TextBrowser_UUIDs"));
         QFont font;
         font.setFamily(QStringLiteral("Consolas"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
         TextBrowser_UUIDs->setFont(font);
+        TextBrowser_UUIDs->setLineWidth(2);
+        TextBrowser_UUIDs->setAcceptRichText(false);
 
-        verticalLayout_3->addWidget(TextBrowser_UUIDs);
+        horizontalLayout_8->addWidget(TextBrowser_UUIDs);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_8);
 
         Button_ClearTextBrowser = new QPushButton(GroupBox_UUIDDisplay);
         Button_ClearTextBrowser->setObjectName(QStringLiteral("Button_ClearTextBrowser"));
@@ -379,7 +443,7 @@ public:
         verticalLayout_3->addWidget(Button_ClearTextBrowser);
 
 
-        verticalLayout_5->addWidget(GroupBox_UUIDDisplay);
+        verticalLayout_6->addWidget(GroupBox_UUIDDisplay);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
@@ -398,7 +462,7 @@ public:
         horizontalLayout_3->addItem(horizontalSpacer_5);
 
 
-        verticalLayout_5->addLayout(horizontalLayout_3);
+        verticalLayout_6->addLayout(horizontalLayout_3);
 
         UUIDerMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UUIDerMainWindow);
@@ -426,7 +490,7 @@ public:
 
         retranslateUi(UUIDerMainWindow);
         QObject::connect(Button_ClearTextBrowser, SIGNAL(clicked()), TextBrowser_UUIDs, SLOT(clear()));
-        QObject::connect(RadioButton_GenType_Random, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(hide()));
+        QObject::connect(RadioButton_GenType_V4, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(hide()));
         QObject::connect(RadioButton_GenType_V5, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
         QObject::connect(RadioButton_GenType_V3, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
         QObject::connect(PushButton_ExitUUIDer, SIGNAL(clicked()), UUIDerMainWindow, SLOT(close()));
@@ -447,13 +511,15 @@ public:
         GroupBox_GenType->setTitle(QApplication::translate("UUIDerMainWindow", "Generator Type", 0));
         RadioButton_GenType_Unknown->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
         RadioButton_GenType_V3->setText(QApplication::translate("UUIDerMainWindow", "V3 (MDA5)", 0));
+        RadioButton_GenType_V4->setText(QApplication::translate("UUIDerMainWindow", "V4(Random)", 0));
         RadioButton_GenType_V5->setText(QApplication::translate("UUIDerMainWindow", "V5 (SHA-1)", 0));
-        RadioButton_GenType_Random->setText(QApplication::translate("UUIDerMainWindow", "Random", 0));
         GroupBox_GenSpecificOptions->setTitle(QApplication::translate("UUIDerMainWindow", "Generator Specific Options", 0));
         Label_UUIDGenNamespace->setText(QApplication::translate("UUIDerMainWindow", "Namespace: ", 0));
         LineEdit_UUIDGen_Namespace->setText(QApplication::translate("UUIDerMainWindow", "{6ba7b810-9dad-11d1-80b4-00c04fd430c8}", 0));
         Label_UUIDGenData->setText(QApplication::translate("UUIDerMainWindow", "Data:", 0));
         LineEdit_UUIDGen_Data->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
+        checkBox->setText(QApplication::translate("UUIDerMainWindow", "Use random data (Data field will be ignored).", 0));
+        label_3->setText(QString());
         label->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to generate: ", 0));
 #ifndef QT_NO_TOOLTIP
         PushButton_GenNewUUID->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate some UUIDs.", 0));
@@ -473,6 +539,9 @@ public:
 #endif // QT_NO_WHATSTHIS
         PushButton_GetUUIDs->setText(QApplication::translate("UUIDerMainWindow", "Retrieve", 0));
         GroupBox_UUIDDisplay->setTitle(QApplication::translate("UUIDerMainWindow", "UUID Display", 0));
+        CheckBox_DisplayCurlyBraces->setText(QApplication::translate("UUIDerMainWindow", "Curly braces", 0));
+        CheckBox_DisplayUpperCases->setText(QApplication::translate("UUIDerMainWindow", "Upper cases", 0));
+        CheckBox_DisplayHypens->setText(QApplication::translate("UUIDerMainWindow", "Hypens", 0));
         Button_ClearTextBrowser->setText(QApplication::translate("UUIDerMainWindow", "Clear", 0));
         PushButton_ExitUUIDer->setText(QApplication::translate("UUIDerMainWindow", "Exit", 0));
         menuFile->setTitle(QApplication::translate("UUIDerMainWindow", "File", 0));

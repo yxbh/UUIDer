@@ -6,6 +6,7 @@
 #include "UUIDerAboutDialog.hpp"
 #include "UUIDGenerator.hpp"
 #include <cassert>
+#include "UUIDerApp.hpp"
 
 UUIDerMainWindow::UUIDerMainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -49,7 +50,7 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
 {
     //// get specified generator type.
     BH::UUIDGenerator::UUIDVer uuid_ver;
-    if (ui->RadioButton_GenType_Random->isChecked())
+    if (ui->RadioButton_GenType_V4->isChecked())
         uuid_ver = BH::UUIDGenerator::UUIDVer::Random;
     else if (ui->RadioButton_GenType_V3->isChecked())
         uuid_ver = BH::UUIDGenerator::UUIDVer::V3;
@@ -77,13 +78,18 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
     const unsigned num_UUID_to_gen(ui->SpinBox_NumUUIDToGen->value());
     auto display_box(ui->TextBrowser_UUIDs);
     display_box->clear();
-    QString UUIDs;
     ui->statusBar->showMessage(QString("Begining UUID generation..."));
+    BH::UUIDerApp::UUIDerList & current_uuid_list(BH::UUIDerApp::GetCurrentUUIDList());
+    current_uuid_list.clear();
+    current_uuid_list.reserve(num_UUID_to_gen);
     for (unsigned i{0}; i != num_UUID_to_gen; ++i)
     {
-        UUIDs += BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, uuid_data).toString() + '\n';
+        current_uuid_list.push_back(BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, uuid_data));
     }
-    display_box->setText(UUIDs);
+    ////
+
+    //// Prepare for display
+    display_box->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
     ////
 
     //// Finished! Report status.
@@ -92,4 +98,52 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
     else
         ui->statusBar->showMessage(QString("1 UUID was generated."));
     ////
+}
+
+void UUIDerMainWindow::on_CheckBox_DisplayCurlyBraces_stateChanged(int arg1)
+{
+    switch (arg1)
+    {
+    case Qt::CheckState::Checked:
+        BH::UUIDerApp::SetUsingCurlyBraces(true);
+        break;
+    case Qt::CheckState::Unchecked:
+        BH::UUIDerApp::SetUsingCurlyBraces(false);
+        break;
+    default:
+        assert(false);
+    }
+    ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
+}
+
+void UUIDerMainWindow::on_CheckBox_DisplayUpperCases_stateChanged(int arg1)
+{
+    switch (arg1)
+    {
+    case Qt::CheckState::Checked:
+        BH::UUIDerApp::SetUsingUpperCases(true);
+        break;
+    case Qt::CheckState::Unchecked:
+        BH::UUIDerApp::SetUsingUpperCases(false);
+        break;
+    default:
+        assert(false);
+    }
+    ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
+}
+
+void UUIDerMainWindow::on_CheckBox_DisplayHypens_stateChanged(int arg1)
+{
+    switch (arg1)
+    {
+    case Qt::CheckState::Checked:
+        BH::UUIDerApp::SetUsingHypens(true);
+        break;
+    case Qt::CheckState::Unchecked:
+        BH::UUIDerApp::SetUsingHypens(false);
+        break;
+    default:
+        assert(false);
+    }
+    ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
 }
