@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>UUIDerMainWindow</class>
  <widget class="QMainWindow" name="UUIDerMainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -95,6 +98,9 @@
               <property name="text">
                <string>?</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item>
@@ -122,7 +128,7 @@
                <string>V4(Random)</string>
               </property>
               <property name="checked">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
              </widget>
             </item>
@@ -155,7 +161,10 @@
            </property>
            <layout class="QGridLayout" name="gridLayout">
             <item row="0" column="0">
-             <widget class="QFrame" name="Frame_GenSpecOptions_NSAndData">
+             <widget class="QFrame" name="Frame_GenSpecOptions">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
@@ -204,9 +213,12 @@
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QCheckBox" name="checkBox">
+                <widget class="QCheckBox" name="CheckBox_UseRanDataForUUIDGeneration">
                  <property name="text">
-                  <string>Use random data (Data field will be ignored).</string>
+                  <string>Use random data ('Data' field ignored).</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -324,7 +336,7 @@
     <item>
      <widget class="QGroupBox" name="UUIDRetrievalGroupBox">
       <property name="title">
-       <string>UUID DB Retrieval</string>
+       <string>UUID DB Retrieval (UNSUPPORTED)</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -639,7 +651,7 @@
   <connection>
    <sender>RadioButton_GenType_V4</sender>
    <signal>clicked()</signal>
-   <receiver>Frame_GenSpecOptions_NSAndData</receiver>
+   <receiver>Frame_GenSpecOptions</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -655,7 +667,7 @@
   <connection>
    <sender>RadioButton_GenType_V5</sender>
    <signal>clicked()</signal>
-   <receiver>Frame_GenSpecOptions_NSAndData</receiver>
+   <receiver>Frame_GenSpecOptions</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -671,7 +683,7 @@
   <connection>
    <sender>RadioButton_GenType_V3</sender>
    <signal>clicked()</signal>
-   <receiver>Frame_GenSpecOptions_NSAndData</receiver>
+   <receiver>Frame_GenSpecOptions</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -697,6 +709,22 @@
     <hint type="destinationlabel">
      <x>397</x>
      <y>716</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RadioButton_GenType_Unknown</sender>
+   <signal>clicked()</signal>
+   <receiver>Frame_GenSpecOptions</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>126</y>
     </hint>
    </hints>
   </connection>

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UUIDerMainWindow_t {
-    QByteArrayData data[9];
-    char stringdata[231];
+    QByteArrayData data[13];
+    char stringdata[388];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,7 +37,11 @@ QT_MOC_LITERAL(4, 66, 32),
 QT_MOC_LITERAL(5, 99, 43),
 QT_MOC_LITERAL(6, 143, 4),
 QT_MOC_LITERAL(7, 148, 42),
-QT_MOC_LITERAL(8, 191, 38)
+QT_MOC_LITERAL(8, 191, 38),
+QT_MOC_LITERAL(9, 230, 34),
+QT_MOC_LITERAL(10, 265, 37),
+QT_MOC_LITERAL(11, 303, 30),
+QT_MOC_LITERAL(12, 334, 52)
     },
     "UUIDerMainWindow\0on_actionNew_triggered\0"
     "\0on_actionAbout_triggered\0"
@@ -45,6 +49,10 @@ QT_MOC_LITERAL(8, 191, 38)
     "on_CheckBox_DisplayCurlyBraces_stateChanged\0"
     "arg1\0on_CheckBox_DisplayUpperCases_stateChanged\0"
     "on_CheckBox_DisplayHypens_stateChanged\0"
+    "on_Button_ClearTextBrowser_clicked\0"
+    "on_PushButton_GenNewUUIDForDB_clicked\0"
+    "on_PushButton_GetUUIDs_clicked\0"
+    "on_CheckBox_UseRanDataForUUIDGeneration_stateChanged\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,7 +62,7 @@ static const uint qt_meta_data_UUIDerMainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -62,12 +70,16 @@ static const uint qt_meta_data_UUIDerMainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x08,
-       3,    0,   45,    2, 0x08,
-       4,    0,   46,    2, 0x08,
-       5,    1,   47,    2, 0x08,
-       7,    1,   50,    2, 0x08,
-       8,    1,   53,    2, 0x08,
+       1,    0,   64,    2, 0x08,
+       3,    0,   65,    2, 0x08,
+       4,    0,   66,    2, 0x08,
+       5,    1,   67,    2, 0x08,
+       7,    1,   70,    2, 0x08,
+       8,    1,   73,    2, 0x08,
+       9,    0,   76,    2, 0x08,
+      10,    0,   77,    2, 0x08,
+      11,    0,   78,    2, 0x08,
+      12,    1,   79,    2, 0x08,
 
  // slots: parameters
     QMetaType::Void,
@@ -75,6 +87,10 @@ static const uint qt_meta_data_UUIDerMainWindow[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    6,
 
        0        // eod
@@ -91,6 +107,10 @@ void UUIDerMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 3: _t->on_CheckBox_DisplayCurlyBraces_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: _t->on_CheckBox_DisplayUpperCases_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->on_CheckBox_DisplayHypens_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->on_Button_ClearTextBrowser_clicked(); break;
+        case 7: _t->on_PushButton_GenNewUUIDForDB_clicked(); break;
+        case 8: _t->on_PushButton_GetUUIDs_clicked(); break;
+        case 9: _t->on_CheckBox_UseRanDataForUUIDGeneration_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -121,13 +141,13 @@ int UUIDerMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 10)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 10;
     }
     return _id;
 }

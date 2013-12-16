@@ -7,12 +7,15 @@
 #include "UUIDGenerator.hpp"
 #include <cassert>
 #include "UUIDerApp.hpp"
+#include "RandomStringGenerator.hpp"
 
 UUIDerMainWindow::UUIDerMainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::UUIDerMainWindow)
 {
     ui->setupUi(this);
+
+    ui->Frame_GenSpecOptions->hide();
 }
 
 UUIDerMainWindow::~UUIDerMainWindow()
@@ -75,20 +78,30 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
     ////
 
     //// Begin UUID generation.
-    const unsigned num_UUID_to_gen(ui->SpinBox_NumUUIDToGen->value());
     auto display_box(ui->TextBrowser_UUIDs);
     display_box->clear();
     ui->statusBar->showMessage(QString("Begining UUID generation..."));
     BH::UUIDerApp::UUIDerList & current_uuid_list(BH::UUIDerApp::GetCurrentUUIDList());
     current_uuid_list.clear();
+    const unsigned num_UUID_to_gen(ui->SpinBox_NumUUIDToGen->value());
     current_uuid_list.reserve(num_UUID_to_gen);
-    for (unsigned i{0}; i != num_UUID_to_gen; ++i)
+    if (uuid_ver == BH::UUIDGenerator::UUIDVer::Random) // V4 (random)
     {
-        current_uuid_list.push_back(BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, uuid_data));
+        for (unsigned i{0}; i != num_UUID_to_gen; ++i)
+            current_uuid_list.push_back(BH::UUIDGenerator::GenNewUUID(uuid_ver));
     }
+    else if (BH::UUIDerApp::IsUsingRandomDataForUUIDGeneration()) // V3 or V5
+    {
+        for (unsigned i{0}; i != num_UUID_to_gen; ++i)
+            current_uuid_list.push_back(BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, BH::RandomStringGenerator::Generate()));
+    }
+    else // V3 or V5 (generate 1 only)
+        current_uuid_list.push_back(BH::UUIDGenerator::GenNewUUID(uuid_ver, uuid_namespace, uuid_data));
+
     ////
 
     //// Prepare for display
+    ui->statusBar->showMessage("Formating UUIDs...");
     display_box->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
     ////
 
@@ -146,4 +159,37 @@ void UUIDerMainWindow::on_CheckBox_DisplayHypens_stateChanged(int arg1)
         assert(false);
     }
     ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
+}
+
+void UUIDerMainWindow::on_Button_ClearTextBrowser_clicked()
+{
+    BH::UUIDerApp::GetCurrentUUIDList().clear();
+}
+
+void UUIDerMainWindow::on_PushButton_GenNewUUIDForDB_clicked()
+{
+    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
+}
+
+void UUIDerMainWindow::on_PushButton_GetUUIDs_clicked()
+{
+    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
+}
+
+void UUIDerMainWindow::on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int arg1)
+{
+    switch (arg1)
+    {
+    case Qt::CheckState::Checked:
+        BH::UUIDerApp::SetUsingRandomDataForUUIDGeneration(true);
+        ui->SpinBox_NumUUIDToGen->setEnabled(true);
+        break;
+    case Qt::CheckState::Unchecked:
+        BH::UUIDerApp::SetUsingRandomDataForUUIDGeneration(false);
+        ui->SpinBox_NumUUIDToGen->setValue(1);
+        ui->SpinBox_NumUUIDToGen->setEnabled(false);
+        break;
+    default:
+        assert(false);
+    }
 }

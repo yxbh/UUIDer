@@ -18,7 +18,8 @@ HEADERS  += UUIDerMainWindow.hpp \
     UUIDGenerator.hpp \
     QUuid_Ext.hpp \
     UUIDerAboutDialog.hpp \
-    UUIDerApp.hpp
+    UUIDerApp.hpp \
+    RandomStringGenerator.hpp
 #
 
 # source files.
@@ -28,7 +29,8 @@ SOURCES += main.cpp\
     UUIDGenerator.cpp \
     QUuid_Ext.cpp \
     UUIDerAboutDialog.cpp \
-    UUIDerApp.cpp
+    UUIDerApp.cpp \
+    RandomStringGenerator.cpp
 #
 
 # forms

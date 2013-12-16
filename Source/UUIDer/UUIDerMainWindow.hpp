@@ -28,6 +28,14 @@ private slots:
 
     void on_CheckBox_DisplayHypens_stateChanged(int arg1);
 
+    void on_Button_ClearTextBrowser_clicked();
+
+    void on_PushButton_GenNewUUIDForDB_clicked();
+
+    void on_PushButton_GetUUIDs_clicked();
+
+    void on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int arg1);
+
 private:
     Ui::UUIDerMainWindow *ui;
 };

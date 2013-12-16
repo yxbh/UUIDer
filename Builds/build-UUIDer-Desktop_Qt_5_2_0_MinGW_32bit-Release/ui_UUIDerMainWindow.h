@@ -61,13 +61,13 @@ public:
     QRadioButton *RadioButton_GenType_V5;
     QGroupBox *GroupBox_GenSpecificOptions;
     QGridLayout *gridLayout;
-    QFrame *Frame_GenSpecOptions_NSAndData;
+    QFrame *Frame_GenSpecOptions;
     QFormLayout *formLayout;
     QLabel *Label_UUIDGenNamespace;
     QLineEdit *LineEdit_UUIDGen_Namespace;
     QLabel *Label_UUIDGenData;
     QLineEdit *LineEdit_UUIDGen_Data;
-    QCheckBox *checkBox;
+    QCheckBox *CheckBox_UseRanDataForUUIDGeneration;
     QLabel *label_3;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -108,6 +108,7 @@ public:
     {
         if (UUIDerMainWindow->objectName().isEmpty())
             UUIDerMainWindow->setObjectName(QStringLiteral("UUIDerMainWindow"));
+        UUIDerMainWindow->setEnabled(true);
         UUIDerMainWindow->resize(500, 756);
         UUIDerMainWindow->setMinimumSize(QSize(500, 756));
         UUIDerMainWindow->setMaximumSize(QSize(500, 16777215));
@@ -177,6 +178,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(RadioButton_GenType_Unknown->sizePolicy().hasHeightForWidth());
         RadioButton_GenType_Unknown->setSizePolicy(sizePolicy2);
+        RadioButton_GenType_Unknown->setChecked(true);
 
         verticalLayout_4->addWidget(RadioButton_GenType_Unknown);
 
@@ -191,7 +193,7 @@ public:
         RadioButton_GenType_V4->setObjectName(QStringLiteral("RadioButton_GenType_V4"));
         sizePolicy2.setHeightForWidth(RadioButton_GenType_V4->sizePolicy().hasHeightForWidth());
         RadioButton_GenType_V4->setSizePolicy(sizePolicy2);
-        RadioButton_GenType_V4->setChecked(true);
+        RadioButton_GenType_V4->setChecked(false);
 
         verticalLayout_4->addWidget(RadioButton_GenType_V4);
 
@@ -213,15 +215,16 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        Frame_GenSpecOptions_NSAndData = new QFrame(GroupBox_GenSpecificOptions);
-        Frame_GenSpecOptions_NSAndData->setObjectName(QStringLiteral("Frame_GenSpecOptions_NSAndData"));
-        Frame_GenSpecOptions_NSAndData->setFrameShape(QFrame::StyledPanel);
-        Frame_GenSpecOptions_NSAndData->setFrameShadow(QFrame::Raised);
-        formLayout = new QFormLayout(Frame_GenSpecOptions_NSAndData);
+        Frame_GenSpecOptions = new QFrame(GroupBox_GenSpecificOptions);
+        Frame_GenSpecOptions->setObjectName(QStringLiteral("Frame_GenSpecOptions"));
+        Frame_GenSpecOptions->setEnabled(true);
+        Frame_GenSpecOptions->setFrameShape(QFrame::StyledPanel);
+        Frame_GenSpecOptions->setFrameShadow(QFrame::Raised);
+        formLayout = new QFormLayout(Frame_GenSpecOptions);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
         formLayout->setObjectName(QStringLiteral("formLayout"));
-        Label_UUIDGenNamespace = new QLabel(Frame_GenSpecOptions_NSAndData);
+        Label_UUIDGenNamespace = new QLabel(Frame_GenSpecOptions);
         Label_UUIDGenNamespace->setObjectName(QStringLiteral("Label_UUIDGenNamespace"));
         QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
@@ -231,35 +234,36 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, Label_UUIDGenNamespace);
 
-        LineEdit_UUIDGen_Namespace = new QLineEdit(Frame_GenSpecOptions_NSAndData);
+        LineEdit_UUIDGen_Namespace = new QLineEdit(Frame_GenSpecOptions);
         LineEdit_UUIDGen_Namespace->setObjectName(QStringLiteral("LineEdit_UUIDGen_Namespace"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, LineEdit_UUIDGen_Namespace);
 
-        Label_UUIDGenData = new QLabel(Frame_GenSpecOptions_NSAndData);
+        Label_UUIDGenData = new QLabel(Frame_GenSpecOptions);
         Label_UUIDGenData->setObjectName(QStringLiteral("Label_UUIDGenData"));
         sizePolicy3.setHeightForWidth(Label_UUIDGenData->sizePolicy().hasHeightForWidth());
         Label_UUIDGenData->setSizePolicy(sizePolicy3);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, Label_UUIDGenData);
 
-        LineEdit_UUIDGen_Data = new QLineEdit(Frame_GenSpecOptions_NSAndData);
+        LineEdit_UUIDGen_Data = new QLineEdit(Frame_GenSpecOptions);
         LineEdit_UUIDGen_Data->setObjectName(QStringLiteral("LineEdit_UUIDGen_Data"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, LineEdit_UUIDGen_Data);
 
-        checkBox = new QCheckBox(Frame_GenSpecOptions_NSAndData);
-        checkBox->setObjectName(QStringLiteral("checkBox"));
+        CheckBox_UseRanDataForUUIDGeneration = new QCheckBox(Frame_GenSpecOptions);
+        CheckBox_UseRanDataForUUIDGeneration->setObjectName(QStringLiteral("CheckBox_UseRanDataForUUIDGeneration"));
+        CheckBox_UseRanDataForUUIDGeneration->setChecked(true);
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, checkBox);
+        formLayout->setWidget(2, QFormLayout::FieldRole, CheckBox_UseRanDataForUUIDGeneration);
 
-        label_3 = new QLabel(Frame_GenSpecOptions_NSAndData);
+        label_3 = new QLabel(Frame_GenSpecOptions);
         label_3->setObjectName(QStringLiteral("label_3"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
 
 
-        gridLayout->addWidget(Frame_GenSpecOptions_NSAndData, 0, 0, 1, 1);
+        gridLayout->addWidget(Frame_GenSpecOptions, 0, 0, 1, 1);
 
 
         horizontalLayout_7->addWidget(GroupBox_GenSpecificOptions);
@@ -490,10 +494,11 @@ public:
 
         retranslateUi(UUIDerMainWindow);
         QObject::connect(Button_ClearTextBrowser, SIGNAL(clicked()), TextBrowser_UUIDs, SLOT(clear()));
-        QObject::connect(RadioButton_GenType_V4, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(hide()));
-        QObject::connect(RadioButton_GenType_V5, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
-        QObject::connect(RadioButton_GenType_V3, SIGNAL(clicked()), Frame_GenSpecOptions_NSAndData, SLOT(show()));
+        QObject::connect(RadioButton_GenType_V4, SIGNAL(clicked()), Frame_GenSpecOptions, SLOT(hide()));
+        QObject::connect(RadioButton_GenType_V5, SIGNAL(clicked()), Frame_GenSpecOptions, SLOT(show()));
+        QObject::connect(RadioButton_GenType_V3, SIGNAL(clicked()), Frame_GenSpecOptions, SLOT(show()));
         QObject::connect(PushButton_ExitUUIDer, SIGNAL(clicked()), UUIDerMainWindow, SLOT(close()));
+        QObject::connect(RadioButton_GenType_Unknown, SIGNAL(clicked()), Frame_GenSpecOptions, SLOT(hide()));
 
         QMetaObject::connectSlotsByName(UUIDerMainWindow);
     } // setupUi
@@ -518,7 +523,7 @@ public:
         LineEdit_UUIDGen_Namespace->setText(QApplication::translate("UUIDerMainWindow", "{6ba7b810-9dad-11d1-80b4-00c04fd430c8}", 0));
         Label_UUIDGenData->setText(QApplication::translate("UUIDerMainWindow", "Data:", 0));
         LineEdit_UUIDGen_Data->setText(QApplication::translate("UUIDerMainWindow", "?", 0));
-        checkBox->setText(QApplication::translate("UUIDerMainWindow", "Use random data (Data field will be ignored).", 0));
+        CheckBox_UseRanDataForUUIDGeneration->setText(QApplication::translate("UUIDerMainWindow", "Use random data ('Data' field ignored).", 0));
         label_3->setText(QString());
         label->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to generate: ", 0));
 #ifndef QT_NO_TOOLTIP
@@ -529,7 +534,7 @@ public:
         PushButton_GenNewUUIDForDB->setToolTip(QApplication::translate("UUIDerMainWindow", "Generate UUID/s and store into current database.", 0));
 #endif // QT_NO_TOOLTIP
         PushButton_GenNewUUIDForDB->setText(QApplication::translate("UUIDerMainWindow", "Generate for DB", 0));
-        UUIDRetrievalGroupBox->setTitle(QApplication::translate("UUIDerMainWindow", "UUID DB Retrieval", 0));
+        UUIDRetrievalGroupBox->setTitle(QApplication::translate("UUIDerMainWindow", "UUID DB Retrieval (UNSUPPORTED)", 0));
         label_2->setText(QApplication::translate("UUIDerMainWindow", "Number of UUID to retrieve: ", 0));
 #ifndef QT_NO_TOOLTIP
         PushButton_GetUUIDs->setToolTip(QApplication::translate("UUIDerMainWindow", "Get UUID/s from the current database.", 0));

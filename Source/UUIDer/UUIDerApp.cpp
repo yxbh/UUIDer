@@ -4,6 +4,7 @@ namespace BH
 {
 
 UUIDerApp::UUIDerList UUIDerApp::s_CurrentUUIDList;
+bool UUIDerApp::s_IsUsingRandomDataForUUIDGeneration = true;
 bool UUIDerApp::s_IsUsingHypens = true;
 bool UUIDerApp::s_IsUsingCurlyBraces = true;
 bool UUIDerApp::s_IsUsingUpperCases = false;
@@ -53,6 +54,11 @@ QString UUIDerApp::CastCurrentUUIDListToQString(void)
     return uuids_list_str;
 }
 
+bool UUIDerApp::IsUsingRandomDataForUUIDGeneration(void)
+{
+    return s_IsUsingRandomDataForUUIDGeneration;
+}
+
 bool UUIDerApp::IsUsingHypens(void)
 {
     return s_IsUsingHypens;
@@ -66,6 +72,11 @@ bool UUIDerApp::IsUsingCurlyBraces(void)
 bool UUIDerApp::IsUsingUpperCases(void)
 {
     return s_IsUsingUpperCases;
+}
+
+void UUIDerApp::SetUsingRandomDataForUUIDGeneration(const bool p_True)
+{
+    s_IsUsingRandomDataForUUIDGeneration = p_True;
 }
 
 void UUIDerApp::SetUsingHypens(const bool p_True)

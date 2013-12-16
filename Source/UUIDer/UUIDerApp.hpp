@@ -15,6 +15,10 @@ public:
 private:
     static UUIDerList s_CurrentUUIDList;
 
+    ////
+    static bool s_IsUsingRandomDataForUUIDGeneration;
+    ////
+
     //// display format
     static bool s_IsUsingHypens;
     static bool s_IsUsingCurlyBraces;
@@ -28,10 +32,12 @@ public:
 
     static QString CastCurrentUUIDListToQString(void);
 
+    static bool IsUsingRandomDataForUUIDGeneration(void);
     static bool IsUsingHypens(void);
     static bool IsUsingCurlyBraces(void);
     static bool IsUsingUpperCases(void);
 
+    static void SetUsingRandomDataForUUIDGeneration(const bool p_True = true);
     static void SetUsingHypens(const bool p_True = true);
     static void SetUsingCurlyBraces(const bool p_True = true);
     static void SetUsingUpperCases(const bool p_True = true);
