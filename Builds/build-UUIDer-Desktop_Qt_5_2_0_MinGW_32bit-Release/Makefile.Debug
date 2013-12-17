@@ -745,80 +745,6 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qicon.h \
 		ui_UUIDerMainWindow.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/QVariant \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QAction \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qaction.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qactiongroup.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QApplication \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qdesktopwidget.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qguiapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qinputmethod.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QButtonGroup \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qbuttongroup.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QCheckBox \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qcheckbox.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractbutton.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QFormLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qformlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlayoutitem.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qboxlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qgridlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QFrame \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QGridLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QGroupBox \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qgroupbox.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QHBoxLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QHeaderView \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qheaderview.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QLabel \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlabel.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QLineEdit \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlineedit.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextcursor.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextformat.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qpen.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextoption.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QMenu \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qmenu.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QMenuBar \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qmenubar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QPushButton \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qpushbutton.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QRadioButton \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qradiobutton.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QSpacerItem \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QSpinBox \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qspinbox.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QStatusBar \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstatusbar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QTextBrowser \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtextbrowser.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtextedit.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextdocument.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QToolBar \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtoolbar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QVBoxLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QWidget \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QFileDialog \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qfiledialog.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qdir.h \
@@ -860,8 +786,10 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qtemporarydir.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/QScopedPointer \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qtemporaryfile.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstractproxymodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qidentityproxymodel.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qsortfilterproxymodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstringlistmodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qjsonarray.h \
@@ -869,8 +797,10 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qjsondocument.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qjsonobject.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstracteventdispatcher.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstractnativeeventfilter.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qbasictimer.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmath.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmetaobject.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmimedata.h \
@@ -924,6 +854,7 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qlinkedlist.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmessageauthenticationcode.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qqueue.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qscopedvaluerollback.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstack.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qtextboundaryfinder.h \
@@ -944,7 +875,19 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtSql/qsqlquerymodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtSql/qsqlrelationaldelegate.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qitemdelegate.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlistview.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qcombobox.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtSql/qsqlrelationaltablemodel.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtSql/qsqltablemodel.h \
@@ -955,7 +898,9 @@ debug/UUIDerMainWindow.o: ../../Source/UUIDer/UUIDerMainWindow.cpp ../../Source/
 		../../Source/UUIDer/UUIDerAboutDialog.hpp \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QDialog \
 		../../Source/UUIDer/UUIDGenerator.hpp \
-		../../Source/UUIDer/UUIDerApp.hpp
+		../../Source/UUIDer/UUIDerApp.hpp \
+		../../Source/UUIDer/RandomStringGenerator.hpp \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/QString
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UUIDerMainWindow.o ..\..\Source\UUIDer\UUIDerMainWindow.cpp
 
 debug/UUIDDatabase.o: ../../Source/UUIDer/UUIDDatabase.cpp ../../Source/UUIDer/UUIDDatabase.hpp \
@@ -1456,57 +1401,7 @@ debug/UUIDerAboutDialog.o: ../../Source/UUIDer/UUIDerAboutDialog.cpp ../../Sourc
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qfiledevice.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qvector2d.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
-		ui_UUIDerAboutDialog.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/QVariant \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QAction \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qaction.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qicon.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qactiongroup.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QApplication \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qdesktopwidget.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qguiapplication.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qinputmethod.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QButtonGroup \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qbuttongroup.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QHBoxLayout \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qboxlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qlayoutitem.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qgridlayout.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QHeaderView \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qheaderview.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QPushButton \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qpushbutton.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qabstractbutton.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QSpacerItem \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QTextBrowser \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtextbrowser.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/qtextedit.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextdocument.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextoption.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextcursor.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qtextformat.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtGui/qpen.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtWidgets/QVBoxLayout
+		ui_UUIDerAboutDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UUIDerAboutDialog.o ..\..\Source\UUIDer\UUIDerAboutDialog.cpp
 
 debug/UUIDerApp.o: ../../Source/UUIDer/UUIDerApp.cpp ../../Source/UUIDer/UUIDerApp.hpp \
@@ -1601,7 +1496,38 @@ debug/RandomStringGenerator.o: ../../Source/UUIDer/RandomStringGenerator.cpp ../
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qrefcount.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qnamespace.h \
 		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qarraydata.h \
-		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstringbuilder.h
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstringbuilder.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/QDebug \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qdebug.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qalgorithms.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qhash.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qiterator.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qlist.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qpair.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmap.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qtextstream.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qiodevice.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qobject.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qobjectdefs.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qobjectdefs_impl.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcoreevent.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qscopedpointer.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qmetatype.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qvarlengtharray.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcontainerfwd.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qisenum.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qobject_impl.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qlocale.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qvariant.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstringlist.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qdatastream.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qregexp.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qstringmatcher.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qshareddata.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qvector.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qpoint.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qset.h \
+		../../../../Tools/Qt/Qt5.2.0/5.2.0/mingw48_32/include/QtCore/qcontiguouscache.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\RandomStringGenerator.o ..\..\Source\UUIDer\RandomStringGenerator.cpp
 
 debug/moc_UUIDerMainWindow.o: debug/moc_UUIDerMainWindow.cpp 
