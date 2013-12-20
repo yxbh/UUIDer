@@ -31,6 +31,7 @@ void UUIDDatabase::CloseConnection(void)
 {
     qDebug() << "UUIDDatabase::CloseConnection : closing current DB.";
     s_UUIDDB.close();
+    QSqlDatabase::removeDatabase(s_UUIDDB.connectionName());
 }
 
 bool UUIDDatabase::IsReady(void)

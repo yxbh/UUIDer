@@ -15,5 +15,8 @@ int main(int p_Argc, char * p_Argv[])
     UUIDerMainWindow UUIDer_MainWindow;
     UUIDer_MainWindow.show();
 
-    return app.exec();
+    const int app_result(app.exec());
+    BH::UUIDDatabase::CloseConnection();
+
+    return app_result;
 }
