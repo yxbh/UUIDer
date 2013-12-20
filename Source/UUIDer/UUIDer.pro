@@ -39,15 +39,6 @@ FORMS    += UUIDerMainWindow.ui \
 #
 
 # compile flags
-win32{
-    greaterThan(QT_MAJOR_VERSION, 4): CONFIG += C++11
-} else {
-    # temp sln until Mac Qt version is updated to 5.2
-    # still getting "invalid deployment target for -stdlib=libc++ (requires OX X 10.7 or later)" error.
-    QMAKE_CXXFLAGS += -std=c++11
-    QMAKE_CXXFLAGS += -stdlib=libc++
-    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7
-    LIBS += -stdlib=libc++ -mmacosx-version-min=10.7
-}
+CONFIG += c++11
 QMAKE_CXXFLAGS_WARN_ON
 #
