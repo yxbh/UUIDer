@@ -7,6 +7,65 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "UUIDer/UUIDer.pro",
+			"settings":
+			{
+				"buffer_size": 829,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"file": "build-UUIDer-Desktop_Qt_5_2_0_MinGW_32bit-Release/ui_UUIDerMainWindow.h",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UUIDer/UUIDGenerator.hpp",
+			"settings":
+			{
+				"buffer_size": 555,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UUIDer/UUIDerMainWindow.ui",
+			"settings":
+			{
+				"buffer_size": 22264,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UUIDer/UUIDerMainWindow.cpp",
+			"settings":
+			{
+				"buffer_size": 6066,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UUIDer/RandomStringGenerator.hpp",
+			"settings":
+			{
+				"buffer_size": 459,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UUIDer/RandomStringGenerator.cpp",
+			"settings":
+			{
+				"buffer_size": 1196,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -32,6 +91,7 @@
 	},
 	"file_history":
 	[
+		"/D/GitHub/UUIDer/.gitignore",
 		"/D/GitHub/UUIDer/Source/UUIDer/UUIDer.pro",
 		"/D/GitHub/UUIDer/Source/build-UUIDer-Desktop_Qt_5_2_0_MinGW_32bit-Release/ui_mainwindow.h",
 		"/D/GitHub/Project-K_0-4-0/.gitignore",
@@ -53,6 +113,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".o",
+			"bin",
+			"QMAKE_CXXFLAGS_WARN_ON",
 			"bin"
 		],
 		"highlight": true,
@@ -71,8 +134,203 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "UUIDer/UUIDer.pro",
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "build-UUIDer-Desktop_Qt_5_2_0_MinGW_32bit-Release/ui_UUIDerMainWindow.h",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "UUIDer/UUIDGenerator.hpp",
+					"settings":
+					{
+						"buffer_size": 555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "UUIDer/UUIDerMainWindow.ui",
+					"settings":
+					{
+						"buffer_size": 22264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2469.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "UUIDer/UUIDerMainWindow.cpp",
+					"settings":
+					{
+						"buffer_size": 6066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2900,
+								2900
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "UUIDer/RandomStringGenerator.hpp",
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "UUIDer/RandomStringGenerator.cpp",
+					"settings":
+					{
+						"buffer_size": 1196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 70.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -132,6 +390,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 235.0,
+	"side_bar_width": 317.0,
 	"status_bar_visible": true
 }
