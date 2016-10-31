@@ -1,5 +1,6 @@
-UUIDer
-======
+#UUIDer
+
+[![Build Status](https://travis-ci.org/yxbh/UUIDer.svg?branch=master)](https://travis-ci.org/yxbh/UUIDer)
 
 A small cross platform GUI application designed to generate UUID's.
 
