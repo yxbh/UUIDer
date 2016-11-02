@@ -1,6 +1,6 @@
-#include "UUIDerMainWindow.hpp"
 #include <QApplication>
-#include "UUIDDatabase.hpp"
+#include "Controllers/UUIDerMainWindow.hpp"
+#include "Logics/UUIDDatabase.hpp"
 
 
 int main(int p_Argc, char * p_Argv[])

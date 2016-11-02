@@ -1,13 +1,14 @@
 #include "UUIDerMainWindow.hpp"
 #include "ui_UUIDerMainWindow.h"
+
+#include <cassert>
 #include <QFileDialog>
 #include <QMessageBox>
-#include "UUIDDatabase.hpp"
 #include "UUIDerAboutDialog.hpp"
-#include "UUIDGenerator.hpp"
-#include <cassert>
-#include "UUIDerApp.hpp"
-#include "RandomStringGenerator.hpp"
+#include "Logics/RandomStringGenerator.hpp"
+#include "Logics/UUIDDatabase.hpp"
+#include "Logics/UUIDGenerator.hpp"
+#include "../UUIDerApp.hpp"
 
 UUIDerMainWindow::UUIDerMainWindow(QWidget *parent) :
     QMainWindow(parent),
