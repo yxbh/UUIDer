@@ -4,41 +4,37 @@
 #
 #-------------------------------------------------
 
-QT      += core gui sql
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT      += core gui widgets sql
 
 TARGET 		= UUIDer
 TEMPLATE 	= app
 
 # header files.
-HEADERS  += UUIDerMainWindow.hpp \
-    UUIDDatabase.hpp \
-    UUIDTypes.hpp \
-    UUIDGenerator.hpp \
-    QUuid_Ext.hpp \
-    UUIDerAboutDialog.hpp \
-    UUIDerApp.hpp \
-    RandomStringGenerator.hpp
+HEADERS += \
+    Controllers/UUIDerMainWindow.hpp \
+    Controllers/UUIDerAboutDialog.hpp \
+    Logics/UUIDDatabase.hpp \
+    Logics/UUIDTypes.hpp \
+    Logics/UUIDGenerator.hpp \
+    Logics/QUuid_Ext.hpp \
+    Logics/UUIDerApp.hpp \
+    Logics/RandomStringGenerator.hpp
 #
 
 # source files.
-SOURCES += main.cpp\
-        UUIDerMainWindow.cpp \
-    UUIDDatabase.cpp \
-    UUIDGenerator.cpp \
-    QUuid_Ext.cpp \
-    UUIDerAboutDialog.cpp \
-    UUIDerApp.cpp \
-    RandomStringGenerator.cpp
+SOURCES += \
+    main.cpp\
+    Controllers/UUIDerMainWindow.cpp \
+    Controllers/UUIDerAboutDialog.cpp \
+    Logics/UUIDDatabase.cpp \
+    Logics/UUIDGenerator.cpp \
+    Logics/QUuid_Ext.cpp \
+    Logics/UUIDerApp.cpp \
+    Logics/RandomStringGenerator.cpp
 #
 
 # forms
-FORMS    += UUIDerMainWindow.ui \
-    UUIDerAboutDialog.ui
-#
-
-# compile flags
-CONFIG += c++11
-QMAKE_CXXFLAGS_WARN_ON
+FORMS += \
+    UI/UUIDerMainWindow.ui \
+    UI/UUIDerAboutDialog.ui
 #
