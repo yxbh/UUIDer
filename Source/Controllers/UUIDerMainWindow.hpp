@@ -36,6 +36,8 @@ private slots:
 
     void on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int arg1);
 
+    void on_actionAbout_Qt_triggered(void);
+
 private:
     Ui::UUIDerMainWindow *ui;
 };

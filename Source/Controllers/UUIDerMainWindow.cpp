@@ -194,3 +194,8 @@ void UUIDerMainWindow::on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int 
         assert(false);
     }
 }
+
+void UUIDerMainWindow::on_actionAbout_Qt_triggered(void)
+{
+    qApp->aboutQt();
+}
