@@ -11,35 +11,26 @@ class UUIDerMainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    explicit UUIDerMainWindow(QWidget *parent = 0);
-    ~UUIDerMainWindow();
-
-private slots:
-    void on_actionNew_triggered();
-
-    void on_actionAbout_triggered();
-
-    void on_PushButton_GenNewUUID_clicked();
-
-    void on_CheckBox_DisplayCurlyBraces_stateChanged(int arg1);
-
-    void on_CheckBox_DisplayUpperCases_stateChanged(int arg1);
-
-    void on_CheckBox_DisplayHypens_stateChanged(int arg1);
-
-    void on_Button_ClearTextBrowser_clicked();
-
-    void on_PushButton_GenNewUUIDForDB_clicked();
-
-    void on_PushButton_GetUUIDs_clicked();
-
-    void on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int arg1);
-
-    void on_actionAbout_Qt_triggered(void);
-
 private:
     Ui::UUIDerMainWindow *ui;
+
+public:
+    explicit UUIDerMainWindow(QWidget *parent = nullptr);
+    ~UUIDerMainWindow(void);
+
+private slots:
+    void on_action_New_triggered(void);
+    void on_action_About_triggered(void);
+    void on_action_AboutQt_triggered(void);
+
+    void on_PushButton_GenNewUUID_clicked(void);
+    void on_PushButton_GenNewUUIDForDB_clicked(void);
+    void on_PushButton_GetUUIDs_clicked(void);
+    void on_Button_ClearTextBrowser_clicked(void);
+    void on_CheckBox_DisplayCurlyBraces_stateChanged(int checkState);
+    void on_CheckBox_DisplayUpperCases_stateChanged(int checkState);
+    void on_CheckBox_DisplayHypens_stateChanged(int checkState);
+    void on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int checkState);
 };
 
 #endif // UUIDERMAINWINDOW_HPP

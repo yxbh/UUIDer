@@ -35,12 +35,12 @@ QMAKE_TARGET_COPYRIGHT = Copyright (C) 2016 Benjamin Huang.
 #   - RCC_DIR:      resource file(s) output
 #   - UI_DIR:       UI source output
 #
-BUILDDIRWIN32DBG = ../Build/OPL-Win32-Debug
-BUILDDIRWIN32REL = ../Build/OPL-Win32-Release
-BUILDDIRUNIXDBG  = ../Build/OPL-Unix-Debug
-BUILDDIRUNIXREL  = ../Build/OPL-Unix-Release
-BUILDDIROSXDBG   = ../Build/OPL-OSX-Debug
-BUILDDIROSXREL   = ../Build/OPL-OSX-Release
+BUILDDIRWIN32DBG = ../Build/Win32-Debug
+BUILDDIRWIN32REL = ../Build/Win32-Release
+BUILDDIRUNIXDBG  = ../Build/Unix-Debug
+BUILDDIRUNIXREL  = ../Build/Unix-Release
+BUILDDIROSXDBG   = ../Build/OSX-Debug
+BUILDDIROSXREL   = ../Build/OSX-Release
 CONFIG(debug, debug|release) { # Debug build dirs
     win32:      DESTDIR     = $${BUILDDIRWIN32DBG}/
     win32:      OBJECTS_DIR = $${BUILDDIRWIN32DBG}/obj

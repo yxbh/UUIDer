@@ -586,16 +586,15 @@
      <string>File</string>
     </property>
     <addaction name="actionOpen_DB"/>
-    <addaction name="actionNew"/>
+    <addaction name="action_New"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="action"/>
     <addaction name="separator"/>
-    <addaction name="actionAbout"/>
-    <addaction name="actionAbout_Qt"/>
+    <addaction name="action_About"/>
+    <addaction name="action_AboutQt"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
@@ -614,7 +613,7 @@
     <string>???</string>
    </property>
   </action>
-  <action name="actionAbout">
+  <action name="action_About">
    <property name="text">
     <string>About</string>
    </property>
@@ -624,12 +623,12 @@
     <string>Open DB</string>
    </property>
   </action>
-  <action name="actionNew">
+  <action name="action_New">
    <property name="text">
     <string>New</string>
    </property>
   </action>
-  <action name="actionAbout_Qt">
+  <action name="action_AboutQt">
    <property name="text">
     <string>About Qt</string>
    </property>
@@ -645,8 +644,8 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>161</x>
-     <y>685</y>
+     <x>182</x>
+     <y>683</y>
     </hint>
     <hint type="destinationlabel">
      <x>139</x>
@@ -661,8 +660,8 @@
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>96</x>
-     <y>179</y>
+     <x>117</x>
+     <y>201</y>
     </hint>
     <hint type="destinationlabel">
      <x>204</x>
@@ -677,8 +676,8 @@
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>105</x>
-     <y>202</y>
+     <x>111</x>
+     <y>226</y>
     </hint>
     <hint type="destinationlabel">
      <x>207</x>
@@ -693,8 +692,8 @@
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>91</x>
-     <y>150</y>
+     <x>109</x>
+     <y>176</y>
     </hint>
     <hint type="destinationlabel">
      <x>195</x>
@@ -725,12 +724,12 @@
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>41</x>
-     <y>122</y>
+     <x>63</x>
+     <y>151</y>
     </hint>
     <hint type="destinationlabel">
-     <x>177</x>
-     <y>126</y>
+     <x>325</x>
+     <y>227</y>
     </hint>
    </hints>
   </connection>

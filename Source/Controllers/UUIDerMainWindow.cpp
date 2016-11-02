@@ -14,17 +14,16 @@ UUIDerMainWindow::UUIDerMainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::UUIDerMainWindow)
 {
-    ui->setupUi(this);
-
-    ui->Frame_GenSpecOptions->hide();
+    this->ui->setupUi(this);
+    this->ui->Frame_GenSpecOptions->hide();
 }
 
-UUIDerMainWindow::~UUIDerMainWindow()
+UUIDerMainWindow::~UUIDerMainWindow(void)
 {
     delete ui;
 }
 
-void UUIDerMainWindow::on_actionNew_triggered()
+void UUIDerMainWindow::on_action_New_triggered(void)
 {
     static const QString title("New DB");
     static const QString dir("");
@@ -44,13 +43,17 @@ void UUIDerMainWindow::on_actionNew_triggered()
         qDebug() << "UUIDerMainWindow::on_actionNew_triggered : action cancelled.";
 }
 
-void UUIDerMainWindow::on_actionAbout_triggered()
+void UUIDerMainWindow::on_action_About_triggered(void)
 {
-    static UUIDerAboutDialog * about_dialog_ptr(new UUIDerAboutDialog(this));
-    about_dialog_ptr->show();
+    (new UUIDerAboutDialog(this))->show();
 }
 
-void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
+void UUIDerMainWindow::on_action_AboutQt_triggered(void)
+{
+    qApp->aboutQt();
+}
+
+void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked(void)
 {
     //// get specified generator type.
     BH::UUIDGenerator::UUIDVer uuid_ver;
@@ -114,9 +117,24 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked()
     ////
 }
 
-void UUIDerMainWindow::on_CheckBox_DisplayCurlyBraces_stateChanged(int arg1)
+void UUIDerMainWindow::on_PushButton_GenNewUUIDForDB_clicked(void)
 {
-    switch (arg1)
+    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
+}
+
+void UUIDerMainWindow::on_PushButton_GetUUIDs_clicked()
+{
+    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
+}
+
+void UUIDerMainWindow::on_Button_ClearTextBrowser_clicked(void)
+{
+    BH::UUIDerApp::GetCurrentUUIDList().clear();
+}
+
+void UUIDerMainWindow::on_CheckBox_DisplayCurlyBraces_stateChanged(int checkState)
+{
+    switch (checkState)
     {
     case Qt::CheckState::Checked:
         BH::UUIDerApp::SetUsingCurlyBraces(true);
@@ -130,9 +148,9 @@ void UUIDerMainWindow::on_CheckBox_DisplayCurlyBraces_stateChanged(int arg1)
     ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
 }
 
-void UUIDerMainWindow::on_CheckBox_DisplayUpperCases_stateChanged(int arg1)
+void UUIDerMainWindow::on_CheckBox_DisplayUpperCases_stateChanged(int checkState)
 {
-    switch (arg1)
+    switch (checkState)
     {
     case Qt::CheckState::Checked:
         BH::UUIDerApp::SetUsingUpperCases(true);
@@ -146,9 +164,9 @@ void UUIDerMainWindow::on_CheckBox_DisplayUpperCases_stateChanged(int arg1)
     ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
 }
 
-void UUIDerMainWindow::on_CheckBox_DisplayHypens_stateChanged(int arg1)
+void UUIDerMainWindow::on_CheckBox_DisplayHypens_stateChanged(int checkState)
 {
-    switch (arg1)
+    switch (checkState)
     {
     case Qt::CheckState::Checked:
         BH::UUIDerApp::SetUsingHypens(true);
@@ -162,24 +180,9 @@ void UUIDerMainWindow::on_CheckBox_DisplayHypens_stateChanged(int arg1)
     ui->TextBrowser_UUIDs->setText(BH::UUIDerApp::CastCurrentUUIDListToQString());
 }
 
-void UUIDerMainWindow::on_Button_ClearTextBrowser_clicked()
+void UUIDerMainWindow::on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int checkState)
 {
-    BH::UUIDerApp::GetCurrentUUIDList().clear();
-}
-
-void UUIDerMainWindow::on_PushButton_GenNewUUIDForDB_clicked()
-{
-    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
-}
-
-void UUIDerMainWindow::on_PushButton_GetUUIDs_clicked()
-{
-    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
-}
-
-void UUIDerMainWindow::on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int arg1)
-{
-    switch (arg1)
+    switch (checkState)
     {
     case Qt::CheckState::Checked:
         BH::UUIDerApp::SetUsingRandomDataForUUIDGeneration(true);
@@ -193,9 +196,4 @@ void UUIDerMainWindow::on_CheckBox_UseRanDataForUUIDGeneration_stateChanged(int 
     default:
         assert(false);
     }
-}
-
-void UUIDerMainWindow::on_actionAbout_Qt_triggered(void)
-{
-    qApp->aboutQt();
 }
