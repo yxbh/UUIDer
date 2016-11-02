@@ -31,37 +31,6 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="Label_CurDBHeader">
-        <property name="text">
-         <string>Current DB: </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="Label_CurDB">
-        <property name="text">
-         <string>?</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item>
      <widget class="QGroupBox" name="GroupBox_UUIDGen">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -88,22 +57,6 @@
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QRadioButton" name="RadioButton_GenType_Unknown">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>?</string>
-              </property>
-              <property name="checked">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QRadioButton" name="RadioButton_GenType_V3">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -113,6 +66,9 @@
               </property>
               <property name="text">
                <string>V3 (MDA5)</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -144,6 +100,22 @@
                <string>V5 (SHA-1)</string>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Preferred</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </widget>
@@ -255,7 +227,7 @@
          <item>
           <widget class="QSpinBox" name="SpinBox_NumUUIDToGen">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -280,14 +252,23 @@
            </property>
           </widget>
          </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
          <item>
           <widget class="QPushButton" name="PushButton_GenNewUUID">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -306,125 +287,6 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="PushButton_GenNewUUIDForDB">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="toolTip">
-            <string>Generate UUID/s and store into current database.</string>
-           </property>
-           <property name="text">
-            <string>Generate for DB</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="UUIDRetrievalGroupBox">
-      <property name="title">
-       <string>UUID DB Retrieval (UNSUPPORTED)</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Number of UUID to retrieve: </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="SpinBox_NumUUIDToGet">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimum">
-            <number>1</number>
-           </property>
-           <property name="maximum">
-            <number>50</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
-         <item>
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="PushButton_GetUUIDs">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="toolTip">
-            <string>Get UUID/s from the current database.</string>
-           </property>
-           <property name="whatsThis">
-            <string/>
-           </property>
-           <property name="text">
-            <string>Retrieve</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
         </layout>
        </item>
       </layout>
@@ -435,98 +297,91 @@
       <property name="title">
        <string>UUID Display</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
-           <property name="sizeConstraint">
-            <enum>QLayout::SetDefaultConstraint</enum>
+          <widget class="QCheckBox" name="CheckBox_DisplayUpperCases">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <item>
-            <widget class="QCheckBox" name="CheckBox_DisplayCurlyBraces">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Curly braces</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="CheckBox_DisplayUpperCases">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Upper cases</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QCheckBox" name="CheckBox_DisplayHypens">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Hypens</string>
-             </property>
-             <property name="checked">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+           <property name="text">
+            <string>Upper cases</string>
+           </property>
+          </widget>
          </item>
          <item>
-          <widget class="QTextBrowser" name="TextBrowser_UUIDs">
-           <property name="font">
-            <font>
-             <family>Consolas</family>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
+          <widget class="QCheckBox" name="CheckBox_DisplayCurlyBraces">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="lineWidth">
-            <number>2</number>
+           <property name="text">
+            <string>Curly braces</string>
            </property>
-           <property name="acceptRichText">
-            <bool>false</bool>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="CheckBox_DisplayHypens">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Hypens</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PushButton_ClearTextBrowser">
+           <property name="text">
+            <string>Clear</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="Button_ClearTextBrowser">
-         <property name="text">
-          <string>Clear</string>
+        <widget class="QTextBrowser" name="TextBrowser_UUIDs">
+         <property name="font">
+          <font>
+           <family>Consolas</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>2</number>
+         </property>
+         <property name="acceptRichText">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -585,8 +440,7 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen_DB"/>
-    <addaction name="action_New"/>
+    <addaction name="action_Exit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -623,22 +477,41 @@
     <string>Open DB</string>
    </property>
   </action>
-  <action name="action_New">
-   <property name="text">
-    <string>New</string>
-   </property>
-  </action>
   <action name="action_AboutQt">
    <property name="text">
     <string>About Qt</string>
    </property>
   </action>
+  <action name="action_Exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>RadioButton_GenType_V3</tabstop>
+  <tabstop>RadioButton_GenType_V4</tabstop>
+  <tabstop>RadioButton_GenType_V5</tabstop>
+  <tabstop>LineEdit_UUIDGen_Namespace</tabstop>
+  <tabstop>LineEdit_UUIDGen_Data</tabstop>
+  <tabstop>CheckBox_UseRanDataForUUIDGeneration</tabstop>
+  <tabstop>SpinBox_NumUUIDToGen</tabstop>
+  <tabstop>PushButton_GenNewUUID</tabstop>
+  <tabstop>CheckBox_DisplayUpperCases</tabstop>
+  <tabstop>CheckBox_DisplayCurlyBraces</tabstop>
+  <tabstop>CheckBox_DisplayHypens</tabstop>
+  <tabstop>PushButton_ClearTextBrowser</tabstop>
+  <tabstop>TextBrowser_UUIDs</tabstop>
+  <tabstop>PushButton_ExitUUIDer</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
-   <sender>Button_ClearTextBrowser</sender>
+   <sender>PushButton_ClearTextBrowser</sender>
    <signal>clicked()</signal>
    <receiver>TextBrowser_UUIDs</receiver>
    <slot>clear()</slot>
@@ -661,7 +534,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>117</x>
-     <y>201</y>
+     <y>173</y>
     </hint>
     <hint type="destinationlabel">
      <x>204</x>
@@ -677,7 +550,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>111</x>
-     <y>226</y>
+     <y>198</y>
     </hint>
     <hint type="destinationlabel">
      <x>207</x>
@@ -693,7 +566,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>109</x>
-     <y>176</y>
+     <y>148</y>
     </hint>
     <hint type="destinationlabel">
      <x>195</x>
@@ -714,22 +587,6 @@
     <hint type="destinationlabel">
      <x>397</x>
      <y>716</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>RadioButton_GenType_Unknown</sender>
-   <signal>clicked()</signal>
-   <receiver>Frame_GenSpecOptions</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>63</x>
-     <y>151</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>325</x>
-     <y>227</y>
     </hint>
    </hints>
   </connection>

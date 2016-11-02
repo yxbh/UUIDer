@@ -6,7 +6,6 @@
 #include <QMessageBox>
 #include "UUIDerAboutDialog.hpp"
 #include "Logics/RandomStringGenerator.hpp"
-#include "Logics/UUIDDatabase.hpp"
 #include "Logics/UUIDGenerator.hpp"
 #include "../UUIDerApp.hpp"
 
@@ -23,24 +22,9 @@ UUIDerMainWindow::~UUIDerMainWindow(void)
     delete ui;
 }
 
-void UUIDerMainWindow::on_action_New_triggered(void)
+void UUIDerMainWindow::on_action_Exit_triggered(void)
 {
-    static const QString title("New DB");
-    static const QString dir("");
-    static const QString filter("All (*.*);;DB Type (*.UUIDDB)");
-    QString selected_filter("DB Type (*.UUIDDB)");
-    const QString path(QFileDialog::getSaveFileName(this, title, dir, filter, &selected_filter));
-    if (path.size() > 0)
-    {
-        if (BH::UUIDDatabase::InitConnection(path))
-        {
-            // TODO : implementation.
-        }
-        else
-            QMessageBox::critical(this, "Failure", "Failure to open DB file!");
-    }
-    else
-        qDebug() << "UUIDerMainWindow::on_actionNew_triggered : action cancelled.";
+    this->close();
 }
 
 void UUIDerMainWindow::on_action_About_triggered(void)
@@ -117,17 +101,7 @@ void UUIDerMainWindow::on_PushButton_GenNewUUID_clicked(void)
     ////
 }
 
-void UUIDerMainWindow::on_PushButton_GenNewUUIDForDB_clicked(void)
-{
-    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
-}
-
-void UUIDerMainWindow::on_PushButton_GetUUIDs_clicked()
-{
-    QMessageBox::critical(this, "Unsupported operation", "Unsupported operation!\nMaybe you need the Pro version?");
-}
-
-void UUIDerMainWindow::on_Button_ClearTextBrowser_clicked(void)
+void UUIDerMainWindow::on_PushButton_ClearTextBrowser_clicked(void)
 {
     BH::UUIDerApp::GetCurrentUUIDList().clear();
 }
