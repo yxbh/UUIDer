@@ -1,7 +1,7 @@
 #include <QApplication>
 #include "Controllers/UUIDerMainWindow.hpp"
 #include "appinfo.hpp"
-#include "version.hpp"
+//#include "version.hpp"
 
 int main(int argc, char * argv[])
 {
